@@ -51,12 +51,7 @@ Install Sage by copying the project into a new folder within your WordPress them
 
 Make sure [Composer](https://getcomposer.org/download/) has been installed before moving on.
 
-Install Sage using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
-
-```shell
-# @ example.com/site/web/app/themes/
-$ composer create-project roots/sage your-theme-name 8.5.1
-```
+`composer install`
 
 ## Theme setup
 
@@ -109,9 +104,6 @@ If your local development URL looks like `http://localhost:8888/project-name/` y
 
 Sage documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
 
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
 
 ## Community
 

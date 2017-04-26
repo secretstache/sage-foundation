@@ -1,0 +1,89 @@
+section.featured-projects {
+  margin-top: rem-calc(10);
+
+  .banner {
+    background: #b7b7b7;
+    @include responsive-margin('bottom');
+    text-align: center;
+    transition: all ease .5s;
+
+    &:hover {
+      background: darken(#b7b7b7, 15%);
+    }
+    a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: rem-calc(22);
+      letter-spacing: 4px;
+      display: block;
+      padding: rem-calc(25 0);
+
+      @include breakpoint(medium) {
+        font-size: rem-calc(28);
+      }
+    }
+  }
+
+  .thumb {
+    text-align: center;
+    margin: rem-calc(20) 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.60;
+    transition: all ease .5s;
+
+    &:hover  {
+      opacity: 1;
+    }
+
+    .overlay {
+      background: rgb(0,0,0);
+      bottom: 0;
+      left: rem-calc(10);
+      right: rem-calc(10);
+      top: 0;
+      opacity: 0;
+      position: absolute;
+      transition: all ease .5s;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  img {
+    padding: rem-calc(10) 0;
+  }
+
+  .thumb:hover .overlay {
+    opacity: .15;
+  }
+
+  @include breakpoint(large) {
+
+    .thumb {
+      display: flex;
+      margin: 0;
+      border-right: rem-calc(2) solid #e1e1e1;
+
+      img {
+        align-self: center;
+        margin: 0 auto;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+  }
+
+}

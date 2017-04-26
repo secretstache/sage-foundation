@@ -1,0 +1,151 @@
+{
+    "key": "group_5889044ed1207",
+    "title": "Component - Gallery",
+    "fields": [
+        {
+            "key": "field_5889044ed5058",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58ded0093f5c1",
+            "label": "On Click Functionality",
+            "name": "on_click_functionality",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "modal": "Open larger image in modal window",
+                "link": "Link to another page"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "Open larger image in modal window",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5889044ed50b9",
+            "label": "Images",
+            "name": "image_gallery",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5889044ed5114",
+            "label": "Style",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58efd555d06db",
+            "label": "Layout",
+            "name": "gallery_layout",
+            "type": "radio",
+            "instructions": "This only applies to galleries with 4 images",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "gallery-options",
+                "id": ""
+            },
+            "choices": {
+                "large_image_left": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/gallery-options\/large_image_left.png\" alt=\"Large Image Left\" width=\"100px\" height=\"auto\"\/>",
+                "large_image_right": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/gallery-options\/large_image_right.png\" alt=\"Large Image Right\" width=\"100px\" height=\"auto\"\/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "large_image_left",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5893eef83ad48",
+            "label": "Style",
+            "name": "style",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5888f1c9f30ca"
+            ],
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "display": "seamless",
+            "layout": "block"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1492923113
+}

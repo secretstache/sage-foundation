@@ -1,0 +1,56 @@
+#tagsdiv-client,
+#tagsdiv-medium {
+  display: none;
+}
+
+
+.acf-field.column-widths li {
+  position: relative;
+  margin-left: 25px;
+}
+
+.acf-field.column-widths .acf-radio-list input {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.acf-field.hide-label > .acf-label label {
+  display: none;
+}
+
+.acf-field-repeater .acf-tab-wrap.-left .acf-tab-group,
+.layout .acf-tab-wrap.-left .acf-tab-group {
+  width: 75px;
+}
+
+.acf-field-repeater .acf-fields.-sidebar,
+.layout .acf-fields.-sidebar {
+  padding-left: 75px !important;
+}
+
+.acf-field-repeater .acf-fields.-sidebar:before,
+.layout .acf-fields.-sidebar:before {
+  width: 74px !important;
+}
+
+[data-name="components"] >.acf-label {
+  display: none !important;
+}
+
+.acf-field.gallery-options .acf-radio-list input {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.acf-field.gallery-options .acf-radio-list img {
+  margin-left: 20px;
+}
+
+.acf-field p.description a.button.cpt {
+  font-style: normal;
+  margin: 5px;
+}

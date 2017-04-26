@@ -16,6 +16,14 @@ function setup() {
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
 
+  // Enable features from SSM Core
+  // https://github.com/secretstache/ssm-core
+  add_theme_support( 'ssm-acf' );
+  add_theme_support( 'ssm-admin-branding' );
+  add_theme_support( 'ssm-admin-setup' );
+  add_theme_support( 'ssm-helpers' );
+  add_theme_support( 'ssm-dashboard-widgets' );
+
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
   load_theme_textdomain('sage', get_template_directory() . '/lang');

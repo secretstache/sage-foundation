@@ -1,0 +1,14 @@
+.default {
+  font-size: rem-calc(16);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-align: center;
+
+}
+
+.has-one-column .component.default p {
+  font-size: rem-calc(18);
+  @include breakpoint(medium) {
+    font-size: rem-calc(20);
+  }
+}

@@ -1,0 +1,77 @@
+$panel-width: 300px !default;
+$panel-background: #777 !default;
+$panel-transition-easing: ease !default;
+$panel-transition-timing: .25s !default;
+$panel-content-padding: 60px 0 0 !default;
+$panel-z-index: 9999 !default;
+$panel-shadow: .01em 0 .5em darken($panel-background, 30%) !default;
+$panel-links-color: $white !default;
+$panel-close-button-bg: $primary-color;
+
+.off-canvas {
+  position: fixed;
+  height: 100%;
+  width: $panel-width;
+  background: $panel-background;
+  padding: $panel-content-padding;
+  z-index: $panel-z-index;
+  overflow-y: auto;
+  transition: all $panel-transition-easing $panel-transition-timing;
+  box-shadow: none;
+  left: -100%;
+
+  &.is-active {
+    box-shadow: $panel-shadow;
+    left: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul.menu > li {
+    margin-bottom: rem-calc(10);
+  }
+
+  ul.menu > li > a {
+    color: $panel-links-color;
+
+    &:hover {
+      background: darken($panel-background, 10%);
+    }
+  }
+
+  ul.menu ul.menu {
+    padding-left: rem-calc(30);
+  }
+}
+
+.off-canvas-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: $panel-close-button-bg;
+  border-radius: 0;
+  fill: white;
+  color: $black;
+  border: none;
+
+  &:hover {
+    background: lighten($panel-close-button-bg, 10%);
+  }
+}
+
+.off-canvas.right {
+  left: initial;
+  right: -100%;
+
+  &.is-active {
+    left: initial;
+    right: 0;
+  }
+
+  .off-canvas-close {
+    left: 0;
+    right: initial;
+  }
+}

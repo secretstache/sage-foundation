@@ -2,8 +2,8 @@
   <?php wp_nav_menu( array( 'menu' => 'primary_navigation', 'items_wrap' => '<ul class="vertical menu">%3$s</ul>', 'walker' => new Foundation_Nav_Walker )); ?>
   <button class="button off-canvas-close" data-toggle="offCanvas"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/x.svg" alt="" class="editable-svg"></button>
 </div>
-<header class="site-header" data-sticky-container>
-  <div class="title-bar" data-sticky data-options="marginTop:0;" data-sticky-on="small" style="width:100%">
+<header class="site-header">
+  <div class="title-bar">
     <div class="row collapse align-middle header-container">
       <div class="brand column">
         <a href="<?php echo home_url('/'); ?>" class="logo">

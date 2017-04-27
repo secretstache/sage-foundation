@@ -25,29 +25,9 @@ $post_query = new WP_Query( $args );
     <?php while ( $post_query->have_posts() ) { ?>
       <?php $post_query->the_post(); ?>
 
-      <?php if ( get_field('override_default_background_image') == TRUE  && $image = get_field('testimonial_background_image')) { ?>
-          <?php $background_image = $image['url']; ?>
-      <?php } else { ?>
-          <?php $default_image = get_field('default_testimonial_background_image', 'options'); ?>
-          <?php $background_image = $default_image['url']; ?>
-      <?php } ?>
-
-      <li style="background-image: url(<?php echo $background_image; ?>)">
-        <div class="testimonials-item">
-          <?php if ( has_post_thumbnail() ) { ?>
-          <div class="testimonials-thumb">
-            <?php the_post_thumbnail(); ?>
-          </div>
-          <?php } ?>
-          <blockquote class="testimonials-text">
-            "<?php echo get_the_content(); ?>"
-            <cite class="testimonials-author"><?php the_title(); ?></cite>
-            <?php if ( $reference = get_field('reference') ) { ?>
-            <div class="testimonials-position"><?php echo $reference; ?></div>
-            <?php } ?>
-          </blockquote>
-        </div>
-      </li>
+      <h2 class="entry-title">
+          <?php the_title(); ?>
+      </h2>
 
     <?php } ?>
 

@@ -18,7 +18,18 @@
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
+
+        $(document).foundation();
+
+        var $body = $('body');
+        $body.on('click.bb.panel', function(e) {
+            var activePanel = $('.off-canvas.is-active');
+
+            if (activePanel.length && !($.contains(activePanel[0], e.target) || activePanel.is(e.target)) && (e.target.getAttribute('data-toggle') !== activePanel[0].id)) {
+                activePanel.foundation('toggle');
+            }
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

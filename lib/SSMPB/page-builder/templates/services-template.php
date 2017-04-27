@@ -27,12 +27,9 @@ $post_query = new WP_Query( $args );
     <?php while ( $post_query->have_posts() ) { ?>
       <?php $post_query->the_post(); ?>
 
-      <?php $icon = has_post_thumbnail() == true ? get_the_post_thumbnail() : ''; ?>
-
       <div class="service-item column">
 
         <h2 class="entry-title">
-            <?php echo $icon; ?>
             <?php the_title(); ?>
         </h2>
 

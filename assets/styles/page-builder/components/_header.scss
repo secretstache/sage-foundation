@@ -1,23 +1,6 @@
 header.component {
   margin-bottom: 0;
 
-  .headline {
-    border: none;
-    color: $darkGrey;
-    font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
-    font-size: rem-calc(24);
-    font-weight: normal;
-    letter-spacing: inherit;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    text-align: left;
-    text-transform: none;
-  }
-
-  .subheadline {
-    font-size: rem-calc(18);
-  }
-
   &.align-left .headline,
   &.align-right .headline {
     max-width: 100%;

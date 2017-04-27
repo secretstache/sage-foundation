@@ -29,29 +29,9 @@ $post_query = new WP_Query( $args );
       <?php while ( $post_query->have_posts() ) { ?>
         <?php $post_query->the_post(); ?>
 
-        <?php $icon = has_post_thumbnail() == true ? get_the_post_thumbnail() : ''; ?>
-
-        <div class="industry-item column">
-
-        <?php if ( has_post_thumbnail() ) { ?>
-
-          <div class="thumb">
-
-            <?php the_post_thumbnail(); ?>
-
-          </div>
-
-        <?php } ?>
-
-        <h2 class="entry-title"><?php the_title(); ?></h2>
-
-        <?php if ( get_the_content() ) { ?>
-
-          <?php the_content(); ?>
-
-        <?php } ?>
-
-        </div>
+        <h2 class="entry-title">
+            <?php the_title(); ?>
+        </h2>
 
       <?php } ?>
 

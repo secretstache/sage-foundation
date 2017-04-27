@@ -1,8 +1,5 @@
 section.hero-unit {
   background: #000000;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
   min-height: rem-calc(600);
   position: relative;
   text-align: center;
@@ -55,34 +52,6 @@ body.admin-bar section.content-block.hero-unit:first-of-type {
 .hero-unit header {
   margin-bottom: 0;
   z-index: 10;
-  .hero-headline {
-    position: relative;
-    z-index: 10;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: rem-calc(50);
-    text-transform: uppercase;
-    letter-spacing: rem-calc(3);
-    line-height: 1;
-    margin-bottom: rem-calc(30);
-
-    @include breakpoint(medium) {
-      font-size: rem-calc(76);
-    }
-  }
-  .hero-subheadline {
-    position: relative;
-    z-index: 10;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    color: #fff;
-    font-size: rem-calc(18);
-    margin-bottom: rem-calc(10);
-    @include breakpoint(medium) {
-      font-size: rem-calc(22);
-    }
-  }
   p.buttons {
     margin: rem-calc(0);
     position: relative;

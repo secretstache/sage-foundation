@@ -46,15 +46,35 @@
 // @include foundation-visibility-classes;
 // @include foundation-flex-classes;
 
+@import "page-builder/mixins";
+
 @import "common/global";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/grid";
-@import "components/wp-classes";
+@import "common/comments";
+@import "common/wp-classes";
+@import "common/off-canvas";
+
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+@import "page-builder/content-blocks/index";
+
+@import "page-builder/templates/hero-unit";
+@import "page-builder/templates/industries";
+@import "page-builder/templates/projects";
+@import "page-builder/templates/services";
+@import "page-builder/templates/team";
+@import "page-builder/templates/testimonials";
+
+@import "page-builder/components/index";
+@import "page-builder/components/buttons";
+@import "page-builder/components/form";
+@import "page-builder/components/gallery";
+@import "page-builder/components/image";
+@import "page-builder/components/text-editor";
+@import "page-builder/components/video";
+
+

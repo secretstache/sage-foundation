@@ -17,15 +17,9 @@ section[class^='bg-'] + section[class^='bg-'],
 section[class*='bg-'] + section[class*='bg-'],
 section.image-gallery + section[class^='bg-'],
 section.image-gallery + section[class*='bg-'] {
-// section.services:first-of-type,
-// section.services:first-of-type + section.services:first-of-type {
   margin-top: 0;
 
 }
-
-// section.content-block:first-of-type {
-//   @include responsive-margin('top', $global-padding*2)
-// }
 
 section.content-block:last-of-type {
   @include responsive-margin('bottom');
@@ -39,52 +33,4 @@ section:last-of-type[class*='bg-'] {
 header.section-header {
   text-align: center;
   @include responsive-margin('bottom');
-}
-
-header h1.headline,
-header h2.headline {
-  font-size: rem-calc(26);
-  color: $primary;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  max-width: rem-calc(910);
-  margin: 0 auto;
-  border-bottom: 1px solid #a1a1a1;
-  padding-bottom: rem-calc(15);
-  margin-bottom: rem-calc(20);
-  letter-spacing: rem-calc(8);
-
-  @include breakpoint(medium) {
-    font-size: rem-calc(33);
-    padding-bottom: rem-calc(35);
-    margin-bottom: rem-calc(40);
-  }
-}
-header h2.subheadline,
-header h3.subheadline {
-  color: #444444;
-  font-size: rem-calc(22);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-
-  @include breakpoint(medium) {
-    font-size: rem-calc(26);
-  }
-
-}
-
-section.content-block.no-border header h1,
-section.content-block.no-border header h2,
-section.content-block.no-border header h3 {
-  border: none;
-  padding-bottom: 0;
-}
-
-.row.collapse .column {
-  position: relative;
-}
-
-body.single-post section.content-block:first-of-type {
-  margin-top: 0;
 }

@@ -64,10 +64,6 @@ function section_id_classes( $s_classes = '' ) {
     $section_id_classes .= ' ' . sanitize_html_class( get_sub_field('background_color') );
   }
 
-  // if ( get_sub_field('background_options') == 'Image' && get_sub_field('background_image') != NULL ) {
-  //   $section_id_classes .= ' has-bg-image';
-  // }
-
   if ( get_sub_field('template') == 'Hero Unit' ) {
     $section_id_classes .= ' hero-unit';
   }
@@ -136,10 +132,6 @@ function component_id_classes( $c_classes = '' ) {
     $component_id_classes .= ' class="component stack-order-' . $c_i . ' stack-order-' . $even_odd;
   }
 
-  if ( $bottom_border = get_sub_field('bottom_border') ) {
-    $component_id_classes .= ' ' . sanitize_html_class( $bottom_border );
-  }
-
   if ( $alignment = get_sub_field('alignment') ) {
     $component_id_classes .= ' ' . sanitize_html_class( $alignment );
   }
@@ -177,19 +169,6 @@ function column_id_classes( $col_classes = '' ) {
     $column_id_classes .= ' ' . sanitize_html_class( get_sub_field('background_color') );
   }
 
-  if ( have_rows('components') ) {
-    while ( have_rows('components') ) {
-      the_row();
-
-      $component = get_row();
-      $component = $component['acf_fc_layout'];
-
-      if ( $component  == 'image' ) {
-        $column_id_classes .= ' has-image';
-      }
-    }
-  }
-
   if ( $col_classes != NULL ) {
       $col_classes = \SSMCore\Helpers\sanitize_html_classes($col_classes);
       $column_id_classes .= ' ' . $col_classes;
@@ -202,7 +181,7 @@ function column_id_classes( $col_classes = '' ) {
 
   $column_id_classes .= '"';
 
-    return $column_id_classes;
+  return $column_id_classes;
 
 }
 
@@ -339,99 +318,6 @@ function do_inline_css() {
 
 }
 
-function do_simple_gallery_image( $image, $size = 'gallery_medium', $functionality = 'modal' ) {
-
-  global $post;
-
-  $src = $image['sizes'][$size];
-  $data = '';
-  $url = '';
-
-
-  if ( $functionality == 'link') {
-    $url = get_field('image_link', $image['ID']);
-    $data = '';
-
-  } elseif ( $functionality == 'modal') {
-    $url = $image['url'];
-    $data = ' data-fancybox="gallery"';
-  }
-
-  if ( $functionality != 'none' ) {
-    $html = '<a href="' . $url . '"' . $data .'>';
-      $html .= '<div class="overlay">';
-  }
-
-  if ( $functionality == 'link' ) {
-    $html .= '<div class="overlay-content">';
-      $html .= '<h2>' . $image['title'] . '</h2>';
-      $html .= '<p>' . $image['description'] . '</p>';
-      $html .= '<button class="button button-outline">See Work</button>';
-    $html .= '</div>';
-  }
-
-  if ( $functionality != 'none') {
-    $html .= '</div>';
-      // <!-- end .overlay -->
-  }
-
-    $html .= '<img class="gallery-item" src="' . $src . '" alt="' .$image['alt'] . '" />';
-
-  if ( $functionality != 'none' ) {
-    $html .= '</a>';
-  }
-
-  return $html;
-
-
-}
-
-function do_complex_gallery_image( $id, $size = 'gallery_medium', $functionality = 'modal' ) {
-
-  global $post;
-
-  $images = get_sub_field('image_gallery');
-  $data = '';
-  $url = '';
-
-  if ( $functionality == 'link') {
-    $url = get_field('image_link', $images[$id]['ID']);
-    $data = '';
-
-  } elseif ( $functionality == 'modal') {
-    $url = $images[$id]['url'];
-    $data = ' data-fancybox="gallery"';
-  }
-
-  if ( $functionality != 'none' ) {
-    $html = '<a href="' . $url . '"' . $data .'>';
-      $html .= '<div class="overlay">';
-  }
-
-  if ( $functionality == 'link' ) {
-    $html .= '<div class="overlay-content">';
-      $html .= '<h2>' . $images[$id]['title'] . '</h2>';
-      $html .= '<p>' . $images[$id]['description'] . '</p>';
-      $html .= '<button class="button button-outline">See Work</button>';
-    $html .= '</div>';
-  }
-
-  if ( $functionality != 'none') {
-    $html .= '</div>';
-      // <!-- end .overlay -->
-  }
-
-    $html .= '<img class="gallery-item" src="' . $images[$id]['sizes'][$size] . '" alt="' .$images[$id]['alt'] . '" />';
-
-  if ( $functionality != 'none' ) {
-    $html .= '</a>';
-  }
-
-  return $html;
-
-}
-
-
 add_action('admin_notices', __NAMESPACE__ . '\\ssmpb_notices');
 /**
  * Conditionally shows message if URL contains ssmpb=save_reminder
@@ -449,4 +335,19 @@ function ssmpb_notices() {
     echo '</div>';
 
   }
+}
+
+add_filter('acf/settings/save_json', __NAMESPACE__ . '\\json_save_point');
+/**
+ * Conditionally shows message if URL contains ssmpb=save_reminder
+ *
+ */
+function json_save_point( $path ) {
+
+    // update path
+    $path = get_stylesheet_directory() . '/lib/acf-json';
+
+    // return
+    return $path;
+
 }

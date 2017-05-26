@@ -1,0 +1,17 @@
+section.template-block-grid {
+	.block-grid .column {
+		@include responsive-margin('bottom', $base-margin/4);
+		@include responsive-margin('top', $base-margin/3);
+	}
+
+	header.section-header {
+		@include responsive-margin('bottom', $base-margin/4);
+	}
+
+	.block-grid .component {
+		@include responsive-margin('top', $base-margin/4);
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+}

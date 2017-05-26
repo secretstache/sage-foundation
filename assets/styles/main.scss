@@ -46,16 +46,15 @@
 // @include foundation-visibility-classes;
 // @include foundation-flex-classes;
 
-@import "page-builder/mixins";
-
+@import "common/mixins";
 @import "common/index";
-@import "common/off-canvas";
 
+@import "layouts/off-canvas";
 @import "layouts/header";
-@import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
+@import "layouts/sidebar";
 @import "layouts/tinymce";
 
 @import "page-builder/sections/index";
@@ -64,6 +63,7 @@
 
 @import "page-builder/templates/hero-unit";
 @import "page-builder/templates/testimonials";
+@import "page-builder/templates/block-grid";
 
 @import "page-builder/components/header";
 @import "page-builder/components/index";

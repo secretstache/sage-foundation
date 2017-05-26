@@ -1,11 +1,11 @@
-@import "common/variables";
-
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/foundation-sites/scss/foundation.scss";
 // endbower
 
 @import "common/foundation";
+@import "common/styleguide";
+
 
 @include foundation-everything($flex: true);
 
@@ -48,9 +48,7 @@
 
 @import "page-builder/mixins";
 
-@import "common/global";
-@import "common/comments";
-@import "common/wp-classes";
+@import "common/index";
 @import "common/off-canvas";
 
 @import "layouts/header";
@@ -60,15 +58,14 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-@import "page-builder/content-blocks/index";
+@import "page-builder/sections/index";
+
+@import "page-builder/columns/index";
 
 @import "page-builder/templates/hero-unit";
-@import "page-builder/templates/industries";
-@import "page-builder/templates/projects";
-@import "page-builder/templates/services";
-@import "page-builder/templates/team";
 @import "page-builder/templates/testimonials";
 
+@import "page-builder/components/header";
 @import "page-builder/components/index";
 @import "page-builder/components/buttons";
 @import "page-builder/components/form";

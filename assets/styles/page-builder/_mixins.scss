@@ -1,10 +1,10 @@
 // Variables
-$global-margin: rem-calc(80);
-$global-padding: rem-calc(80);
+$base-margin: rem-calc(80);
+$base-padding: rem-calc(80);
 
 
 // Mixins
-@mixin responsive-padding($direction: 'vert', $unit: $global-padding) {
+@mixin responsive-padding($direction: 'vert', $unit: $base-padding) {
 
   @if $direction == 'top' {
     padding-top: rem-calc($unit/2);
@@ -44,7 +44,7 @@ $global-padding: rem-calc(80);
 
 }
 
-@mixin responsive-margin($direction: 'vert', $unit: $global-margin) {
+@mixin responsive-margin($direction: 'vert', $unit: $base-margin) {
 
   @if $direction == 'top' {
     margin-top: rem-calc($unit/2);

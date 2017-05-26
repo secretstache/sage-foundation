@@ -1,6 +1,6 @@
 .component {
   @include responsive-margin('top');
-  &:first-of-type {
+  &.stack-order-1 {
     margin-top: 0;
   }
   &.align-left{
@@ -14,10 +14,26 @@
   }
 }
 
-header.component:first-of-type + div.component {
-  @include responsive-margin('top', $global-margin/2);
+.has-2-cols .component,
+.has-3-cols .component,
+.has-4-cols .component   {
+  @include responsive-margin('top', $base-margin/2);
+  &.stack-order-1 {
+    margin-top: $base-margin;
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
+  }
 }
 
-.has-one-column header.component:first-of-type + div.component {
-  @include responsive-margin('top', $global-margin);
+.has-2-cols .col-1 .component,
+.has-3-cols .col-1 .component,
+.has-4-cols .col-1 .component {
+  &.stack-order-1 {
+    margin-top: 0;
+  }
+}
+
+.has-one-column header.component + .component.default {
+  @include responsive-margin('top', $base-margin/2);
 }

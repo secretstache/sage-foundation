@@ -1,0 +1,4 @@
+section[class^='bg-'] .column .inner,
+section[class*='bg-'] .column .inner {
+	@include responsive-padding($base-padding/2);
+}

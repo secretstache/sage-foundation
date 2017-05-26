@@ -85,30 +85,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_58efd555d06db",
-            "label": "Layout",
-            "name": "gallery_layout",
-            "type": "radio",
-            "instructions": "This only applies to galleries with 4 images",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "gallery-options",
-                "id": ""
-            },
-            "choices": {
-                "large_image_left": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/gallery-options\/large_image_left.png\" alt=\"Large Image Left\" width=\"100px\" height=\"auto\"\/>",
-                "large_image_right": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/gallery-options\/large_image_right.png\" alt=\"Large Image Right\" width=\"100px\" height=\"auto\"\/>"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "large_image_left",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
             "key": "field_5893eef83ad48",
             "label": "Style",
             "name": "style",
@@ -147,5 +123,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1492923113
+    "modified": 1495742020
 }

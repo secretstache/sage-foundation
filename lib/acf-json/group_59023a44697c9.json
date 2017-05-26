@@ -1,12 +1,12 @@
 {
-    "key": "group_58fbf93367a25",
-    "title": "Global Inline Styles",
+    "key": "group_59023a44697c9",
+    "title": "Analytics",
     "fields": [
         {
-            "key": "field_58fbf9336d93c",
-            "label": "CSS Editor",
-            "name": "global_inline_styles",
-            "type": "acf_code_field",
+            "key": "field_59023a5548a06",
+            "label": "Facebook Account Id",
+            "name": "facebook_account_id",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,8 +17,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "mode": "css",
-            "theme": "monokai"
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -26,7 +27,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": ""
+                "value": "acf-options-brand-settings"
             }
         ]
     ],
@@ -38,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495738942
+    "modified": 1495740665
 }

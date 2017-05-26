@@ -73,31 +73,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_5900bf0aa6b6e",
-            "label": "Bottom Border",
-            "name": "bottom_border",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "no-border": "No Border",
-                "border-gray": "Thin Gray Border",
-                "border-blue": "Short Blue Border"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "border-gray",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
             "key": "field_58fe8b1ff108c",
             "label": "Alignment",
             "name": "alignment",
@@ -157,5 +132,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1493242576
+    "modified": 1495738728
 }

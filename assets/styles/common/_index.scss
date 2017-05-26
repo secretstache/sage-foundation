@@ -1,0 +1,26 @@
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+.aligncenter {
+  display: block;
+  height: auto;
+  margin-bottom: ($base-margin / 2)
+}
+.alignleft,
+.alignright {
+  height: auto;
+}
+@include breakpoint(medium) {
+  // Only float if not on an extra small device
+  .alignleft {
+    float: left;
+    margin-right: ($base-margin / 2);
+  }
+  .alignright {
+    float: right;
+    margin-left: ($base-margin / 2);
+  }
+}

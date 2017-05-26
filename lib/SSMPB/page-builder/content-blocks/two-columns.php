@@ -22,20 +22,35 @@ if ( get_sub_field('column_gutter') == 'Collapse' ) {
   $gutter = '';
 }
 
+if ( get_sub_field('background_options') == 'Image' && get_sub_field('background_image') != NULL ) {
+  $image = get_sub_field('background_image');
+  $style = ' style="background-image: url(' . $image['url'] . ')"';
+}
 
+echo '<section' . SSMPB\section_id_classes() . $style . '>';
 
-echo '<section' . SSMPB\section_id_classes() . '>';
+if ( get_sub_field('background_options') == 'Video' && get_sub_field('background_video') != NULL ) {
+
+  $video = get_sub_field('background_video');
+
+  echo '<video class="hero-video" autoplay loop>';
+    echo '<source src="' . $video['url'] . '" type="video/mp4">';
+  echo '</video>';
+
+  echo '<div class="overlay"></div>';
+
+}
 
 SSMPB\maybe_do_section_header();
 
-if ( have_rows( 'two_column_modules' ) ) {
+if ( have_rows( 'two_column_components' ) ) {
 
   echo '<div class="row has-2-cols align-' . $alignment . $gutter . '" data-equalizer data-equalize-on="small">';
 
   $i = 1;
   $pluck = 0;
 
-  while ( have_rows( 'two_column_modules' ) ) {
+  while ( have_rows( 'two_column_components' ) ) {
 
     the_row();
 

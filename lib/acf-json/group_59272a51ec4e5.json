@@ -1,11 +1,11 @@
 {
-    "key": "group_58fbf93367a25",
-    "title": "Global Inline Styles",
+    "key": "group_59272a51ec4e5",
+    "title": "Inline Scripts",
     "fields": [
         {
-            "key": "field_58fbf9336d93c",
-            "label": "CSS Editor",
-            "name": "global_inline_styles",
+            "key": "field_59272a51ef7cf",
+            "label": "JS Editor",
+            "name": "page_inline_scripts",
             "type": "acf_code_field",
             "instructions": "",
             "required": 0,
@@ -17,20 +17,20 @@
             },
             "default_value": "",
             "placeholder": "",
-            "mode": "css",
+            "mode": "javascript",
             "theme": "monokai"
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
-                "operator": "==",
-                "value": ""
+                "param": "post_type",
+                "operator": "!=",
+                "value": "testimonial"
             }
         ]
     ],
-    "menu_order": 99,
+    "menu_order": 5,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -38,5 +38,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495738942
+    "modified": 1495741238
 }

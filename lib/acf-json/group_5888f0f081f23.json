@@ -128,7 +128,7 @@
                         {
                             "key": "field_5888f6c7a4ffa",
                             "label": "Full Width",
-                            "name": "full_width_modules",
+                            "name": "full_width_components",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -270,10 +270,7 @@
                                 "class": "column-widths",
                                 "id": ""
                             },
-                            "choices": {
-                                "12": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/12.png\" alt=\"12\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
-                                "10": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/8.png\" alt=\"10\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>"
-                            },
+                            "choices": [],
                             "allow_null": 0,
                             "other_choice": 0,
                             "save_other_choice": 0,
@@ -389,7 +386,7 @@
                         {
                             "key": "field_5888f8e090ffa",
                             "label": "Two Columns",
-                            "name": "two_column_modules",
+                            "name": "two_column_components",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -457,27 +454,6 @@
                                     },
                                     "placement": "left",
                                     "endpoint": 0
-                                },
-                                {
-                                    "key": "field_5900e4daba364",
-                                    "label": "Background Color",
-                                    "name": "column_background_color",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "clone": [
-                                        "group_5900de35e049c"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
                                 },
                                 {
                                     "key": "field_5893e92fa1fa5",
@@ -553,9 +529,9 @@
                                 "id": ""
                             },
                             "choices": {
-                                "6_6": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/6_6.png\" alt=\"6_6\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
-                                "8_4": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/8_4.png\" alt=\"8\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
-                                "4_8": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/4_8.png\" alt=\"8\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>"
+                                "6_6": "<img src=\"\/wp-content\/themes\/starter\/lib\/SSMPB\/images\/layout-thumbnails\/6_6.png\" alt=\"6_6\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
+                                "8_4": "<img src=\"\/wp-content\/themes\/starter\/lib\/SSMPB\/images\/layout-thumbnails\/8_4.png\" alt=\"8\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
+                                "4_8": "<img src=\"\/wp-content\/themes\/starter\/lib\/SSMPB\/images\/layout-thumbnails\/4_8.png\" alt=\"8\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -714,7 +690,7 @@
                         {
                             "key": "field_5888fb2e5f50e",
                             "label": "Three Columns",
-                            "name": "three_column_modules",
+                            "name": "three_column_components",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -782,27 +758,6 @@
                                     },
                                     "placement": "top",
                                     "endpoint": 0
-                                },
-                                {
-                                    "key": "field_5900e80bbc082",
-                                    "label": "Background Color",
-                                    "name": "column_background_color",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "clone": [
-                                        "group_5900de35e049c"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
                                 },
                                 {
                                     "key": "field_5893ea21dd9c0",
@@ -878,9 +833,9 @@
                                 "id": ""
                             },
                             "choices": {
-                                "4_4_4": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/4_4_4.png\" alt=\"4_4_4\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
-                                "6_3_3": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/6_3_3.png\" alt=\"6_3_3\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
-                                "3_6_6": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/3_3_6.png\" alt=\"3_3_6\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>"
+                                "4_4_4": "<img src=\"\/wp-content\/themes\/starter\/lib\/SSMPB\/images\/layout-thumbnails\/4_4_4.png\" alt=\"4_4_4\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
+                                "6_3_3": "<img src=\"\/wp-content\/themes\/starter\/lib\/SSMPB\/images\/layout-thumbnails\/6_3_3.png\" alt=\"6_3_3\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>",
+                                "3_6_6": "<img src=\"\/wp-content\/themes\/starter\/lib\/SSMPB\/images\/layout-thumbnails\/3_3_6.png\" alt=\"3_3_6\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -1039,7 +994,7 @@
                         {
                             "key": "field_5888fb83617a7",
                             "label": "Four Columns",
-                            "name": "four_column_modules",
+                            "name": "four_column_components",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -1107,27 +1062,6 @@
                                     },
                                     "placement": "left",
                                     "endpoint": 0
-                                },
-                                {
-                                    "key": "field_5900e58eba366",
-                                    "label": "Background Color",
-                                    "name": "column_background_color",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "clone": [
-                                        "group_5900de35e049c"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
                                 },
                                 {
                                     "key": "field_5893ea8cdd9c4",
@@ -1203,7 +1137,7 @@
                                 "id": ""
                             },
                             "choices": {
-                                "3_3_3_3": "<img src=\"\/wp-content\/themes\/markitcreative\/lib\/SSMPB\/images\/layout-thumbnails\/3_3_3_3.png\" alt=\"3_3_3_3\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>"
+                                "3_3_3_3": "<img src=\"\/wp-content\/themes\/starter\/lib\/SSMPB\/images\/layout-thumbnails\/3_3_3_3.png\" alt=\"3_3_3_3\" width=\"100px\" height=\"auto\" style=\"border: 1px solid #ddd;\"\/>"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -1323,15 +1257,8 @@
         [
             {
                 "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "project"
+                "operator": "!=",
+                "value": "testimonial"
             }
         ]
     ],
@@ -1343,5 +1270,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1493230997
+    "modified": 1495762065
 }

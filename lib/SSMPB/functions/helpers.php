@@ -351,3 +351,18 @@ function json_save_point( $path ) {
     return $path;
 
 }
+
+add_filter('acf/settings/load_json', __NAMESPACE__ . '\\json_load_point');
+/**
+ * LOAD json
+ *
+ */
+function json_load_point( $paths ) {
+
+  // append path
+  $paths[] = get_stylesheet_directory() . '/lib/acf-json';
+
+  // return
+  return $paths;
+
+}

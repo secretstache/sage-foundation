@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "(970) 949-8110",
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -34,29 +34,10 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "info@markitcreative.com",
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_58f940aad8ccf",
-            "label": "Default Subject Line",
-            "name": "default_subject_line",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Make Your Mark",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_58be3b1686789",
@@ -73,7 +54,7 @@
             },
             "output_type": "array",
             "address_layout": "[[{\"id\":\"street1\",\"label\":\"Street 1\"}],[{\"id\":\"street2\",\"label\":\"Street 2\"}],[],[{\"id\":\"city\",\"label\":\"City\"},{\"id\":\"state\",\"label\":\"State\"},{\"id\":\"zip\",\"label\":\"Postal Code\"}],[]]",
-            "address_options": "{\"street1\":{\"id\":\"street1\",\"label\":\"Street 1\",\"defaultValue\":\"PO Box 6267\",\"enabled\":true,\"cssClass\":\"street1\",\"separator\":\"\"},\"street2\":{\"id\":\"street2\",\"label\":\"Street 2\",\"defaultValue\":\"Suite 303\",\"enabled\":true,\"cssClass\":\"street2\",\"separator\":\"\"},\"street3\":{\"id\":\"street3\",\"label\":\"Street 3\",\"defaultValue\":\"\",\"enabled\":false,\"cssClass\":\"street3\",\"separator\":\"\"},\"city\":{\"id\":\"city\",\"label\":\"City\",\"defaultValue\":\"Avon\",\"enabled\":true,\"cssClass\":\"city\",\"separator\":\",\"},\"state\":{\"id\":\"state\",\"label\":\"State\",\"defaultValue\":\"CO\",\"enabled\":true,\"cssClass\":\"state\",\"separator\":\"\"},\"zip\":{\"id\":\"zip\",\"label\":\"Postal Code\",\"defaultValue\":\"81620\",\"enabled\":true,\"cssClass\":\"zip\",\"separator\":\"\"},\"country\":{\"id\":\"country\",\"label\":\"Country\",\"defaultValue\":\"\",\"enabled\":false,\"cssClass\":\"country\",\"separator\":\"\"}}"
+            "address_options": "{\"street1\":{\"id\":\"street1\",\"label\":\"Street 1\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"street1\",\"separator\":\"\"},\"street2\":{\"id\":\"street2\",\"label\":\"Street 2\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"street2\",\"separator\":\"\"},\"street3\":{\"id\":\"street3\",\"label\":\"Street 3\",\"defaultValue\":\"\",\"enabled\":false,\"cssClass\":\"street3\",\"separator\":\"\"},\"city\":{\"id\":\"city\",\"label\":\"City\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"city\",\"separator\":\",\"},\"state\":{\"id\":\"state\",\"label\":\"State\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"state\",\"separator\":\"\"},\"zip\":{\"id\":\"zip\",\"label\":\"Postal Code\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"zip\",\"separator\":\"\"},\"country\":{\"id\":\"country\",\"label\":\"Country\",\"defaultValue\":\"\",\"enabled\":false,\"cssClass\":\"country\",\"separator\":\"\"}}"
         },
         {
             "key": "field_58be3b3fef6ed",
@@ -90,7 +71,7 @@
             },
             "output_type": "array",
             "address_layout": "[[{\"id\":\"street1\",\"label\":\"Street 1\"}],[{\"id\":\"street2\",\"label\":\"Street 2\"}],[],[{\"id\":\"city\",\"label\":\"City\"},{\"id\":\"state\",\"label\":\"State\"},{\"id\":\"zip\",\"label\":\"Postal Code\"}],[]]",
-            "address_options": "{\"street1\":{\"id\":\"street1\",\"label\":\"Street 1\",\"defaultValue\":\"PO Box 6267\",\"enabled\":true,\"cssClass\":\"street1\",\"separator\":\"\"},\"street2\":{\"id\":\"street2\",\"label\":\"Street 2\",\"defaultValue\":\"Suite 303\",\"enabled\":true,\"cssClass\":\"street2\",\"separator\":\"\"},\"street3\":{\"id\":\"street3\",\"label\":\"Street 3\",\"defaultValue\":\"\",\"enabled\":false,\"cssClass\":\"street3\",\"separator\":\"\"},\"city\":{\"id\":\"city\",\"label\":\"City\",\"defaultValue\":\"Avon\",\"enabled\":true,\"cssClass\":\"city\",\"separator\":\",\"},\"state\":{\"id\":\"state\",\"label\":\"State\",\"defaultValue\":\"CO\",\"enabled\":true,\"cssClass\":\"state\",\"separator\":\"\"},\"zip\":{\"id\":\"zip\",\"label\":\"Postal Code\",\"defaultValue\":\"81620\",\"enabled\":true,\"cssClass\":\"zip\",\"separator\":\"\"},\"country\":{\"id\":\"country\",\"label\":\"Country\",\"defaultValue\":\"\",\"enabled\":false,\"cssClass\":\"country\",\"separator\":\"\"}}"
+            "address_options": "{\"street1\":{\"id\":\"street1\",\"label\":\"Street 1\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"street1\",\"separator\":\"\"},\"street2\":{\"id\":\"street2\",\"label\":\"Street 2\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"street2\",\"separator\":\"\"},\"street3\":{\"id\":\"street3\",\"label\":\"Street 3\",\"defaultValue\":\"\",\"enabled\":false,\"cssClass\":\"street3\",\"separator\":\"\"},\"city\":{\"id\":\"city\",\"label\":\"City\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"city\",\"separator\":\",\"},\"state\":{\"id\":\"state\",\"label\":\"State\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"state\",\"separator\":\"\"},\"zip\":{\"id\":\"zip\",\"label\":\"Postal Code\",\"defaultValue\":\"\",\"enabled\":true,\"cssClass\":\"zip\",\"separator\":\"\"},\"country\":{\"id\":\"country\",\"label\":\"Country\",\"defaultValue\":\"\",\"enabled\":false,\"cssClass\":\"country\",\"separator\":\"\"}}"
         }
     ],
     "location": [
@@ -110,5 +91,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1492965321
+    "modified": 1495740489
 }

@@ -19,9 +19,12 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "fonts": {
+      "files": ["fonts/**/*", "../bower_components/**/*.{eot,otf,svg,ttc,ttf,woff,woff2}"]
     }
   },
   "config": {
-    "devUrl": "http://destroy.dev"
+    "devUrl": "http://starter.dev"
   }
 }

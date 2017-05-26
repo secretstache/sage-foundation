@@ -18,13 +18,23 @@ if ( get_sub_field('background_options') == 'Image' && get_sub_field('background
 
 echo '<section' . SSMPB\section_id_classes() . $style . '>';
 
-// SSMPB\maybe_do_section_header();
+if ( get_sub_field('background_options') == 'Video' && get_sub_field('background_video') != NULL ) {
 
-if ( have_rows( 'full_width_modules' ) ) {
+  $video = get_sub_field('background_video');
+
+  echo '<video class="hero-video" autoplay loop>';
+    echo '<source src="' . $video['url'] . '" type="video/mp4">';
+  echo '</video>';
+
+  echo '<div class="overlay"></div>';
+
+}
+
+if ( have_rows( 'full_width_components' ) ) {
 
   echo '<div class="row has-one-column align-center collapse">';
 
-    while ( have_rows( 'full_width_modules' ) ) {
+    while ( have_rows( 'full_width_components' ) ) {
 
       the_row();
 

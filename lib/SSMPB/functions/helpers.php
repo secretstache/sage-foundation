@@ -60,7 +60,7 @@ function section_id_classes( $s_classes = '' ) {
     $section_id_classes .= ' class="content-block row-' . $s_i . ' row-' . $even_odd;
   }
 
-  if ( get_sub_field('background_color') != 'none' ) {
+  if ( get_sub_field('background_color') && get_sub_field('background_color') != 'none' ) {
     $section_id_classes .= ' ' . sanitize_html_class( get_sub_field('background_color') );
   }
 
@@ -87,14 +87,6 @@ function section_id_classes( $s_classes = '' ) {
       $template = str_replace('_', '-', $template);
 
       $section_id_classes .= ' ' . $template;
-
-      if ( $template == 'services' ) {
-        $section_id_classes .= ' bg-gray-light';
-      }
-
-      if ( $template == 'testimonials' || $template == 'hero-unit' ) {
-        $section_id_classes .= ' bg-image';
-      }
 
     }
   }

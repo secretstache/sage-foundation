@@ -10,7 +10,9 @@
     text-align: center;
   }
   &.align-right{
-    text-align: right;
+    @include breakpoint(medium) {
+      text-align: right;
+    }
   }
 }
 
@@ -19,7 +21,7 @@
 .has-4-cols .component   {
   @include responsive-margin('top', $base-margin/2);
   &.stack-order-1 {
-    margin-top: $base-margin;
+    // margin-top: $base-margin;
     @include breakpoint(medium) {
       margin-top: 0;
     }

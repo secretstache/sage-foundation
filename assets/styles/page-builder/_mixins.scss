@@ -1,9 +1,5 @@
-// Variables
-$base-margin: rem-calc(80);
-$base-padding: rem-calc(80);
-
-
 // Mixins
+
 @mixin responsive-padding($direction: 'vert', $unit: $base-padding) {
 
   @if $direction == 'top' {

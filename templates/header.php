@@ -10,6 +10,14 @@
     
     <?php if ( $word_mark = get_field('brand_word_mark', 'options') ) { ?>
       <img src="<?php echo $word_mark['url']; ?>" alt="<?php echo $word_mark['alt']; ?>" class="brand-word-mark">
+    <?php } else { ?>
+
+      <p class="site-title">
+
+        <a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
+  
+      </p>
+
     <?php } ?>
 
     </div>
@@ -24,27 +32,30 @@
 </div>
 
 <header class="site-header">
-  <div class="title-bar">
-    <div class="row collapse align-middle align-justify">
-      <div class="brand column shrink">
-        <a href="<?php echo home_url('/'); ?>" class="logo">
-          <?php if ( $icon = get_field('brand_icon', 'options') ) { ?>
-          <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" class="logo-pic">
-          <?php } ?>
-          <?php if ( $word_mark = get_field('brand_word_mark', 'options') ) { ?>
-          <img src="<?php echo $word_mark['url']; ?>" alt="<?php echo $word_mark['alt']; ?>" class="company-name">
-          <?php } ?>
-        </a>
-      </div>
-      <nav class="primary-navigation column shrink">
-        <?php wp_nav_menu( array( 'menu' => 'primary_navigation', 'items_wrap' => '<ul class="medium-horizontal menu show-for-medium dropdown" data-dropdown-menu>%3$s</ul>', 'walker' => new Foundation_Nav_Walker )); ?>
-        <button class="hamburger hide-for-medium" type="button" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">
-          <span class="hamburger-line hamburger-line1"></span>
-          <span class="hamburger-line hamburger-line2"></span>
-          <span class="hamburger-line hamburger-line3"></span>
-        </button>
-      </nav>
+  <div class="row collapse align-middle align-justify">
+    <div class="brand column shrink">
+      <a href="<?php echo home_url('/'); ?>" class="logo">
+        <?php if ( $icon = get_field('brand_icon', 'options') ) { ?>
+        <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" class="logo-pic">
+        <?php } ?>
+        <?php if ( $word_mark = get_field('brand_word_mark', 'options') ) { ?>
+        <img src="<?php echo $word_mark['url']; ?>" alt="<?php echo $word_mark['alt']; ?>" class="company-name">
+        <?php } else { ?>
+
+          <?php echo get_bloginfo('name'); ?>
+
+        <?php } ?>
+
+      </a>
     </div>
+    <nav class="primary-navigation column shrink">
+      <?php wp_nav_menu( array( 'menu' => 'primary_navigation', 'items_wrap' => '<ul class="medium-horizontal menu show-for-medium dropdown" data-dropdown-menu>%3$s</ul>', 'walker' => new Foundation_Nav_Walker )); ?>
+      <button class="hamburger hide-for-medium" type="button" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">
+        <span class="hamburger-line hamburger-line1"></span>
+        <span class="hamburger-line hamburger-line2"></span>
+        <span class="hamburger-line hamburger-line3"></span>
+      </button>
+    </nav>
   </div>
 </header>
 

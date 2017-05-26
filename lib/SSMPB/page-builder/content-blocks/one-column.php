@@ -32,7 +32,7 @@ if ( get_sub_field('background_options') == 'Video' && get_sub_field('background
 
 if ( have_rows( 'full_width_components' ) ) {
 
-  echo '<div class="row has-one-column align-center collapse">';
+  echo '<div class="row has-one-column align-center">';
 
     while ( have_rows( 'full_width_components' ) ) {
 

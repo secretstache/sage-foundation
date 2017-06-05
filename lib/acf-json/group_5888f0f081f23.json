@@ -238,8 +238,8 @@
                         },
                         {
                             "key": "field_58eff6fb0d4c2",
-                            "label": "Background Color",
-                            "name": "section_background_color",
+                            "label": "Background Options",
+                            "name": "section_background_options",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -250,7 +250,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5900de35e049c"
+                                "group_58eff558158a0"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -496,8 +496,8 @@
                         },
                         {
                             "key": "field_58eff7160d4c3",
-                            "label": "Background Color",
-                            "name": "section_background_color",
+                            "label": "Background Options",
+                            "name": "section_background_options",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -508,7 +508,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5900de35e049c"
+                                "group_58eff558158a0"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -800,8 +800,8 @@
                         },
                         {
                             "key": "field_58eff7300d4c4",
-                            "label": "Background Color",
-                            "name": "section_background_color",
+                            "label": "Background Options",
+                            "name": "section_background_options",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -812,7 +812,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5900de35e049c"
+                                "group_58eff558158a0"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -1104,8 +1104,8 @@
                         },
                         {
                             "key": "field_58eff74a0d4c5",
-                            "label": "Background Color",
-                            "name": "section_background_color",
+                            "label": "Background Options",
+                            "name": "section_background_options",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -1116,7 +1116,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5900de35e049c"
+                                "group_58eff558158a0"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -1270,5 +1270,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495816280
+    "modified": 1496687961
 }

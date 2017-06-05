@@ -2,34 +2,44 @@
 
 $c_classes[] = 'video';
 
-$container_class = '';
+$iframe = get_sub_field('video_link');
+$video_url = get_sub_field('video_link', false, false);
 
-if ( get_sub_field('display_as_full_width') == TRUE ) {
-  $container_class = 'flex-video';
-} else {
-  $container_class = 'fixed-width';
+preg_match('/src="(.+?)"/', $iframe, $matches);
+
+$src = $matches[1];
+$params = array();
+
+if ( strpos($video_url, 'vimeo') !== false ) {
+  $params = array(
+    'byline'    => 0,
+    'title'     => 0,
+    'portrait'  => 0
+  );
+} elseif ( strpos($video_url, 'youtube') !== false ) {
+  $params = array(
+    'rel'               => 0,
+    'showinfo'          => 0,
+    'modestbranding'    => 0,
+    'vq'                => 'hd720'
+  );
 }
+
+$new_src = add_query_arg($params, $src);
+$iframe = str_replace($src, $new_src, $iframe);
+
+// add extra attributes to iframe html
+$attributes = 'frameborder="0"';
+$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
 ?>
 
 <div<?php echo SSMPB\component_id_classes( $c_classes ); ?>>
 
-  <?php if ( get_sub_field('display_as_full_width') == FALSE ) { ?>
+    <div class="flex-video">
 
-  <div class="video-container">
-
-  <?php } ?>
-
-    <div class="flex">
-
-    <?php the_sub_field('video_link'); ?>
+    <?php echo $iframe; ?>
 
     </div>
-
-  <?php if ( get_sub_field('display_as_full_width') == FALSE ) { ?>
-
-  </div>
-
-  <?php } ?>
 
 </div>

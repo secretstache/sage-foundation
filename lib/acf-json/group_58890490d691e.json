@@ -31,8 +31,8 @@
                 "class": "",
                 "id": ""
             },
-            "width": 800,
-            "height": ""
+            "width": 640,
+            "height": 360
         },
         {
             "key": "field_58890490da40d",
@@ -49,50 +49,6 @@
             },
             "placement": "top",
             "endpoint": 0
-        },
-        {
-            "key": "field_58ff8c1730b64",
-            "label": "Video Size",
-            "name": "display_as_full_width",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Display as Full Width",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_58ff8c6d30b65",
-            "label": "Note",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_58ff8c1730b64",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "This video will embed, centered at <code>640px<\/code> by <code>490px<\/code>.",
-            "new_lines": "wpautop",
-            "esc_html": 0
         },
         {
             "key": "field_5893eff413d72",
@@ -133,5 +89,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1493142508
+    "modified": 1496697695
 }

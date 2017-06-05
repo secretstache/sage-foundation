@@ -27,7 +27,7 @@
 <?php } else { ?>
 
 <div class="off-canvas right" id="offCanvas" data-toggler=".is-active">
-  <?php wp_nav_menu( array( 'menu' => 'primary_navigation', 'items_wrap' => '<ul class="vertical menu">%3$s</ul>', 'walker' => new Foundation_Nav_Walker )); ?>
+  <?php wp_nav_menu( array( 'menu' => 'primary_navigation', 'container' => FALSE, 'items_wrap' => '<ul class="vertical menu">%3$s</ul>', 'walker' => new Foundation_Nav_Walker )); ?>
   <button class="button off-canvas-close" data-toggle="offCanvas"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/x.svg" alt="" class="editable"></button>
 </div>
 
@@ -49,7 +49,7 @@
       </a>
     </div>
     <nav class="primary-navigation column shrink">
-      <?php wp_nav_menu( array( 'menu' => 'primary_navigation', 'items_wrap' => '<ul class="medium-horizontal menu show-for-medium dropdown" data-dropdown-menu>%3$s</ul>', 'walker' => new Foundation_Nav_Walker )); ?>
+      <?php wp_nav_menu( array( 'menu' => 'primary_navigation', 'container' => FALSE, 'items_wrap' => '<ul class="medium-horizontal menu show-for-medium dropdown" data-dropdown-menu>%3$s</ul>', 'walker' => new Foundation_Nav_Walker )); ?>
       <button class="hamburger hide-for-medium" type="button" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">
         <span class="hamburger-line hamburger-line1"></span>
         <span class="hamburger-line hamburger-line2"></span>

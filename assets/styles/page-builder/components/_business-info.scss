@@ -1,0 +1,11 @@
+.component.business-info {
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.contact-info {
+		@include responsive-margin('vert', $base-margin/4);
+	}
+
+}

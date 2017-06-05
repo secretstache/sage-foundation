@@ -20,12 +20,11 @@ $c_classes = 'business-info';
 
   <?php $office_address = get_field('office_address', 'options'); ?>
 
-  <p class="contacts-item" itemprop="address" itemscope itemtype="http://schema.org/PhysicalAddress">
-    <b>Office:</b><br>
+  <div itemprop="address" itemscope itemtype="http://schema.org/PhysicalAddress">
+    <p class="faux-title">Office:</p>
     <span itemprop="streetAddress"><?php echo $office_address['street1']; ?> <?php echo $office_address['street2']; ?></span><br>
-    <span itemprop="addressLocality"><?php echo $office_address['city']; ?>, <span itemprop="addressRegion"><?php echo $office_address['state']; ?></span>
-    <span itemprop="postalCode"><?php echo $office_address['zip']; ?></span>
-  </p>
+    <span itemprop="addressLocality"><?php echo $office_address['city']; ?></span>, <span itemprop="addressRegion"><?php echo $office_address['state']; ?></span> <span itemprop="postalCode"><?php echo $office_address['zip']; ?></span>
+  </div>
 
   <?php } ?>
 
@@ -33,12 +32,11 @@ $c_classes = 'business-info';
 
   <?php $mailing_address = get_field('mailing_address', 'options'); ?>
 
-  <p class="contacts-item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    <b>Mail:</b><br>
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <p class="faux-title">Mail:</p>
     <span itemprop="streetAddress"><?php echo $mailing_address['street1']; ?> <?php echo $mailing_address['street2']; ?></span><br>
-    <span itemprop="addressLocality"><?php echo $mailing_address['city']; ?>, <span itemprop="addressRegion"><?php echo $mailing_address['state']; ?></span>
-    <span itemprop="postalCode"><?php echo $mailing_address['zip']; ?></span>
-  </p>
+    <span itemprop="addressLocality"><?php echo $mailing_address['city']; ?></span>, <span itemprop="addressRegion"><?php echo $mailing_address['state']; ?></span> <span itemprop="postalCode"><?php echo $mailing_address['zip']; ?></span>
+  </div>
 
   <?php } ?>
 
@@ -47,17 +45,17 @@ $c_classes = 'business-info';
   <?php $phone = get_field('primary_phone_number', 'options'); ?>
   <?php $email = get_field('primary_email_address', 'options'); ?>
 
-  <p class="contacts-item">
+  <div class="contact-info">
     <?php if ( $phone ) { ?>
       <?php $stripped_phone = preg_replace('/\D+/', '', $phone); ?>
-      <b>Phone:</b> <span itemprop="telephone"><a href="tel:<?php echo $stripped_phone; ?>"><?php echo $phone; ?></a></span><br>
+      <p class="phone">Phone: <span itemprop="telephone"><a href="tel:<?php echo $stripped_phone; ?>"><?php echo $phone; ?></a></span></p>
     <?php } ?>
 
     <?php if ( $email ) { ?>
     <?php $subject = get_field('default_subject_line', 'options'); ?>
-    <b>Email:</b> <span itemprop="email"><a href="mailto:<?php echo $email; ?>?subject=<?php echo $subject; ?>"><?php echo $email; ?></a></span>
+    <p clas="email">Email: <span itemprop="email"><a href="mailto:<?php echo $email; ?>?subject=<?php echo $subject; ?>"><?php echo $email; ?></a></span></p>
     <?php } ?>
-  </p>
+  </div>
 
   <?php } ?>
 

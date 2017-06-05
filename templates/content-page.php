@@ -1,3 +1,5 @@
+<?php SSMPB\do_hero_unit(); ?>
+
 <?php if ( get_the_content() ) { ?>
 
 <section class="content-block row-1 row-odd">

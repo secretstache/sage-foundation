@@ -17,6 +17,10 @@ if ( have_rows( 'components' ) ) {
 
       SSMPB\hm_get_template_part( SSMPB_DIR . 'page-builder/components/header-component.php', $template_args ) ;
 
+    } elseif ( get_row_layout() == 'hero_header' ) {
+
+      SSMPB\hm_get_template_part( SSMPB_DIR . 'page-builder/components/hero-header-component.php', $template_args ) ;
+
     } elseif ( get_row_layout() == 'text_editor' ) {
 
       SSMPB\hm_get_template_part( SSMPB_DIR . 'page-builder/components/text-editor-component.php', $template_args ) ;

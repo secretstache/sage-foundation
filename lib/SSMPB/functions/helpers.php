@@ -2,6 +2,10 @@
 
 namespace SSMPB;
 
+function do_hero_unit( ) {
+    \get_template_part( 'lib/SSMPB/page-builder/hero-unit');
+}
+
 function do_page_builder( ) {
     \get_template_part( 'lib/SSMPB/page-builder/content-blocks');
 }
@@ -41,6 +45,53 @@ function maybe_do_section_header() {
 
     echo $html;
   }
+}
+
+function hero_unit_id_classes( $h_classes = '' ) {
+
+  $inline_classes = get_sub_field('html_classes');
+
+  $hero_unit_id_classes = '';
+
+  if ( $html_id = get_sub_field('html_id') ) {
+    $html_id = sanitize_html_class(strtolower($html_id));
+    $hero_unit_id_classes .= ' id="' . $html_id . '" class="hero-unit';
+  } else {
+    $hero_unit_id_classes .= ' class="hero-unit';
+  }
+
+  if ( get_sub_field('background_options') == 'Color' ) {
+    $hero_unit_id_classes .= ' ' . sanitize_html_class( get_sub_field('background_color') );
+  }
+
+  if ( get_sub_field('background_options') == 'Image' ) {
+    $hero_unit_id_classes .= ' bg-image';
+  }
+
+  if ( get_sub_field('background_options') == 'Video' ) {
+    $hero_unit_id_classes .= ' bg-video';
+  }
+
+  if ( get_field('hero_unit_height') == 'full' ) {
+    $hero_unit_id_classes .= ' full-height';
+  } elseif ( get_field('hero_unit_height') == 'fixed' ) {
+    $hero_unit_id_classes .= ' fixed-height';
+  }
+
+  if ( $h_classes != NULL ) {
+    $h_classes = \SSMCore\Helpers\sanitize_html_classes($s_classes);
+    $hero_unit_id_classes .= ' ' . $h_classes;
+
+  }
+
+  if ( $inline_classes != NULL ) {
+    $hero_unit_id_classes .= ' ' . $inline_classes;
+  }
+
+  $hero_unit_id_classes .= '"';
+
+  return $hero_unit_id_classes;
+
 }
 
 function section_id_classes( $s_classes = '' ) {

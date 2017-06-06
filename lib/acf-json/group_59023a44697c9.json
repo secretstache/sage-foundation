@@ -3,6 +3,44 @@
     "title": "Analytics",
     "fields": [
         {
+            "key": "field_592d9b24bac4a",
+            "label": "Google Tag Manager ID",
+            "name": "google_tag_manager_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_592d9b2ebac4b",
+            "label": "Google Site Verification ID",
+            "name": "google_site_verification_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_59023a5548a06",
             "label": "Facebook Account Id",
             "name": "facebook_account_id",
@@ -20,6 +58,88 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_592d9b55bac4c",
+            "label": "Custom Tracking Scripts",
+            "name": "custom_tracking_scripts",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_592d9b69bac4d",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Tracking Script",
+            "sub_fields": [
+                {
+                    "key": "field_592d9b69bac4d",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_592d9b93bac4e",
+                    "label": "Script",
+                    "name": "code",
+                    "type": "acf_code_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "mode": "htmlmixed",
+                    "theme": "monokai"
+                },
+                {
+                    "key": "field_592d9ba1bac4f",
+                    "label": "Location",
+                    "name": "location",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "header": "Header",
+                        "footer": "Footer"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "Footer",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
         }
     ],
     "location": [
@@ -39,5 +159,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495740665
+    "modified": 1496724602
 }

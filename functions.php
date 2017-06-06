@@ -17,6 +17,8 @@ $sage_includes = [
   'lib/wrapper.php',     // Theme wrapper class
   'lib/customizer.php',  // Theme customizer
   'lib/helpers.php',     // Reusable goodies
+  'lib/admin.php',       // Admin goodies
+  'lib/public.php',      // Public goodies
   'lib/walker.php',      // Walker Class
   'lib/SSMPB/ssmpb.php', // Page builder
 ];

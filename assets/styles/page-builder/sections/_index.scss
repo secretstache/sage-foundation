@@ -53,25 +53,25 @@ header.section-header {
   @include responsive-margin('bottom');
 }
 
-@include breakpoint(medium) {
+@include breakpoint(large) {
   section[class^='thin-'] .row,
   section[class*='thin-'] .row {
     margin-left: auto;
     margin-right: auto;
   }
-  section.content-block.thin-90 .row {
+  section.thin-90 .row {
     width: 90%;
   }
-  section.content-block.thin-80 .row {
+  section.thin-80 .row {
     width: 80%;
   }
-  section.content-block.thin-70 .row {
+  section.thin-70 .row {
     width: 70%;
   }
-  section.content-block.thin-60 .row {
+  section.thin-60 .row {
     width: 60%;
   }
-  section.content-block.thin-50 .row {
+  section.thin-50 .row {
     width: 50%;
   }
 }

@@ -32,7 +32,7 @@
 </div>
 
 <header class="site-header">
-  <div class="row collapse align-middle align-justify">
+  <div class="row large-collapse align-middle align-justify">
     <div class="brand column shrink">
       <a href="<?php echo home_url('/'); ?>" class="logo">
         <?php if ( $icon = get_field('brand_icon', 'options') ) { ?>

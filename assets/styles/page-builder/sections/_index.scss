@@ -53,25 +53,25 @@ header.section-header {
   @include responsive-margin('bottom');
 }
 
-@include breakpoint(large) {
-  section[class^='thin-'] .row,
-  section[class*='thin-'] .row {
+@include breakpoint(medium) {
+  section[class^='thin-'] .main.row,
+  section[class*='thin-'] .main.row {
     margin-left: auto;
     margin-right: auto;
   }
-  section.thin-90 .row {
+  section.content-block.thin-90 .main.row {
     width: 90%;
   }
-  section.thin-80 .row {
+  section.content-block.thin-80 .main.row {
     width: 80%;
   }
-  section.thin-70 .row {
+  section.content-block.thin-70 .main.row {
     width: 70%;
   }
-  section.thin-60 .row {
+  section.content-block.thin-60 .main.row {
     width: 60%;
   }
-  section.thin-50 .row {
+  section.content-block.thin-50 .main.row {
     width: 50%;
   }
 }

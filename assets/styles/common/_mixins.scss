@@ -79,3 +79,35 @@
   }
 
 }
+
+@mixin responsive-type( $large, $small: '' ) {
+
+  @if ( $small != '' ) {
+    font-size: rem-calc( $small );
+    @include breakpoint(medium) {
+      font-size: rem-calc($large);
+    }
+  } @else {
+
+    @if ( ( $large * .75 ) < 16 ) {
+      font-size: rem-calc(16);
+    } @else {
+      font-size: rem-calc($large * .75);
+    }
+
+    @include breakpoint(medium) {
+      font-size: rem-calc($large);
+    }
+  
+  }
+
+}
+
+@mixin match-gutter( $spacing: 'padding' ) {
+  #{$spacing}-left: rem-calc($gutter-small/2);
+  #{$spacing}-right: rem-calc($gutter-small/2);
+  @include breakpoint(medium) {
+    #{$spacing}-left: rem-calc($gutter-medium/2);
+    #{$spacing}-right: rem-calc($gutter-mediun/2);
+  }
+}

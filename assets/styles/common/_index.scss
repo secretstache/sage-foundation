@@ -1,3 +1,15 @@
+body {
+  background: $outer-bg-color;
+  color: $primary-font-color;
+  font-family: $primary-font-family;
+  font-weight: normal;
+}
+
+img[class*='wp-image-'],
+img[class^='wp-image-'] {
+    margin-bottom: rem-calc(20);
+}
+
 .alignnone {
   margin-left: 0;
   margin-right: 0;

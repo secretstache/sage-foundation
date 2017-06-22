@@ -1,6 +1,26 @@
-$base-margin: rem-calc(40);
-$base-padding: rem-calc(40);
+// Color Palette
 
-.bg-gray-light {
-	background-color: #dddddd;
-}
+// Utility
+$max-width: rem-calc(1280);
+$header-height: rem-calc(60); // If applicable
+$base-padding: rem-calc(40);
+$base-margin: rem-calc(40);
+$outer-bg-color: #eee; // If applicable
+$gutter-small: map-get($grid-column-gutter, small);
+$gutter-medium: map-get($grid-column-gutter, medium);
+
+// Typography
+$primary-font-family: $body-font-family; // from F6 settings
+$primary-font-color: $black; // from F6 settings
+$reverse-font-color: $white; // from F6 settings
+
+// Off Canvas Menu
+$panel-width: 300px !default;
+$panel-background: #777 !default;
+$panel-transition-easing: ease !default;
+$panel-transition-timing: .25s !default;
+$panel-content-padding: 60px 0 0 !default;
+$panel-z-index: 9999 !default;
+$panel-shadow: .01em 0 .5em darken($panel-background, 30%) !default;
+$panel-links-color: $white !default;
+$panel-close-button-bg: $primary-color;

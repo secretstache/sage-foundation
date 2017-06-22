@@ -1,13 +1,3 @@
-$panel-width: 300px !default;
-$panel-background: #777 !default;
-$panel-transition-easing: ease !default;
-$panel-transition-timing: .25s !default;
-$panel-content-padding: 60px 0 0 !default;
-$panel-z-index: 9999 !default;
-$panel-shadow: .01em 0 .5em darken($panel-background, 30%) !default;
-$panel-links-color: $white !default;
-$panel-close-button-bg: $primary-color;
-
 .off-canvas {
   position: fixed;
   height: 100%;

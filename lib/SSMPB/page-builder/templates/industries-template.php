@@ -20,7 +20,7 @@ $post_query = new WP_Query( $args );
 
 <?php if ( $args['post__in'] != NULL && $post_query->have_posts() ) { ?>
 
-  <div class="row align-center">
+  <div class="row main align-center">
 
     <div class="small-12 medium-11 column">
 

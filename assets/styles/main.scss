@@ -47,7 +47,9 @@
 // @include foundation-flex-classes;
 
 @import "common/mixins";
+@import "common/type";
 @import "common/index";
+@import "common/tinymce";
 
 @import "layouts/off-canvas";
 @import "layouts/header";
@@ -55,7 +57,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/sidebar";
-@import "layouts/tinymce";
 
 @import "page-builder/sections/index";
 

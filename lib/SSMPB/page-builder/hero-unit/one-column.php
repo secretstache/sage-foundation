@@ -31,7 +31,7 @@ if ( get_sub_field('background_options') == 'Video' && get_sub_field('background
 
 if ( have_rows( 'one_column_components' ) ) {
 
-  echo '<div class="row has-one-column align-center align-middle">';
+  echo '<div class="row main has-1-col align-center align-middle">';
 
     while ( have_rows( 'one_column_components' ) ) {
 

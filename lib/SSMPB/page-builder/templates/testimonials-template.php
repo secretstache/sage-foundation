@@ -18,7 +18,7 @@ $post_query = new WP_Query( $args );
 
 <?php if ( $args['post__in'] != NULL && $post_query->have_posts() ) { ?>
 
-<div class="row align-top">
+<div class="row main align-top">
   <div class="small-12 column">
     <ul class="testimonials-slider">
 

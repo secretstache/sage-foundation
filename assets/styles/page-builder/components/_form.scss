@@ -33,3 +33,16 @@ img.gform_ajax_spinner,
 	}
 
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $primary-font-color;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $primary-font-color;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $primary-font-color;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $primary-font-color;
+}

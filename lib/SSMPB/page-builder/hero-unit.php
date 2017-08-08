@@ -23,6 +23,18 @@ if ( ! post_password_required() ) {
 
     }
 
+  } else {
+
+    echo '<section class="hero-unit default-hero-unit">';
+      echo '<div class="row align-center">';
+        echo '<div class="small-12 column">';
+          echo '<header class="component default-hero-header align-center">';
+            echo '<h1 class="headline">' . get_the_title() . '</h1>';
+          echo '</header>';
+        echo '</div>';
+      echo '</div>';
+    echo '</section>';
+
   }
 
 }

@@ -47,7 +47,7 @@ SSMPB\maybe_do_section_header();
 
 if ( have_rows( 'three_column_components' ) ) {
 
-  echo '<div class="row has-3-cols align-' . $alignment . $gutter . '" data-equalizer>';
+  echo '<div class="row main has-3-cols align-' . $alignment . $gutter . '" data-equalizer>';
 
   $i = 1;
   $pluck = 0;

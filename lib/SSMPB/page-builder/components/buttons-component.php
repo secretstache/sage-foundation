@@ -11,7 +11,7 @@ if ( $buttons ) {
 
     $target = $button['target'] == 'New Tab' ? '_blank' : '_self';
 
-    echo '<a class="button" href="' . $button['url'] . '" target="' . $target . '>' . $button['label'] . '</a>';
+    echo '<a class="button" href="' . $button['url'] . '" target="' . $target . '">' . $button['label'] . '</a>';
 
   }
 

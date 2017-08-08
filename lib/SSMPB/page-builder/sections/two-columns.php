@@ -45,7 +45,7 @@ SSMPB\maybe_do_section_header();
 
 if ( have_rows( 'two_column_components' ) ) {
 
-  echo '<div class="row has-2-cols align-' . $alignment . $gutter . '" data-equalizer data-equalize-on="small">';
+  echo '<div class="row main has-2-cols align-' . $alignment . $gutter . '" data-equalizer data-equalize-on="small">';
 
   $i = 1;
   $pluck = 0;

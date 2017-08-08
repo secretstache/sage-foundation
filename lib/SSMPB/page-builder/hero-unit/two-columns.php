@@ -40,7 +40,7 @@ if ( get_sub_field('background_options') == 'Video' && get_sub_field('background
 
 if ( have_rows( 'two_column_components' ) ) {
 
-  echo '<div class="row has-2-cols align-' . $alignment . $gutter . '" data-equalizer>';
+  echo '<div class="row main has-2-cols align-' . $alignment . $gutter . '" data-equalizer>';
 
   $i = 1;
   $pluck = 0;

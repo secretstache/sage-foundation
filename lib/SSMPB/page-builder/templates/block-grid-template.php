@@ -7,7 +7,7 @@ $small_up = round($medium_up/2);
 
 if ( have_rows( 'block_grid_columns' ) ) {
 
-	echo '<div class="row grid small-up-' . $small_up . ' medium-up-' . $medium_up . '">';
+	echo '<div class="row main grid small-up-' . $small_up . ' medium-up-' . $medium_up . '">';
 	
 	while ( have_rows( 'block_grid_columns' ) ) {
 		the_row();

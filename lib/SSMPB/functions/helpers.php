@@ -111,13 +111,10 @@ function section_id_classes( $s_classes = '' ) {
     $section_id_classes .= ' class="content-block row-' . $s_i . ' row-' . $even_odd;
   }
 
-  if ( get_sub_field('background_color') && get_sub_field('background_color') != 'none' ) {
+  if ( get_sub_field('background_options') == 'Color' ) {
     $section_id_classes .= ' ' . sanitize_html_class( get_sub_field('background_color') );
   }
 
-  if ( get_sub_field('template') == 'Hero Unit' ) {
-    $section_id_classes .= ' hero-unit';
-  }
 
   if ( have_rows('template') ) {
     while ( have_rows('template') ) {
@@ -137,7 +134,7 @@ function section_id_classes( $s_classes = '' ) {
 
       $template = str_replace('_', '-', $template);
 
-      $section_id_classes .= ' ' . $template;
+      $section_id_classes .= ' template-' . $template;
 
     }
   }
@@ -290,46 +287,35 @@ add_filter('acf/fields/flexible_content/layout_title/name=content_blocks', __NAM
  */
 function content_block_title( $title, $field, $layout, $i ) {
 
-    if ( get_row_layout() == 'template' ) {
+  if ( get_row_layout() == 'wrapper_open' ) {
 
-      if ( have_rows('template') ) {
-        while ( have_rows('template') ) {
-        the_row();
+    $label = '<span class="wrapper">Wrapper - Open</span>';
 
-        if ( get_row_index() > 1 )
-        return;
+  } elseif ( get_row_layout() == 'wrapper_close' ) {
 
-        $template = get_row();
-        $template = $template['acf_fc_layout'];
-        $template = str_replace('_', ' ', $template);
-        $template = ucwords( $template );
+    $label = '<span class="wrapper">Wrapper - Close</span>';
 
-        }
-      }
+  } else {
 
-      $label = $template . ' Section';
+    if ( get_sub_field('section_label') ) {
+
+      $label = get_sub_field('section_label');
 
     } else {
 
-      if ( get_sub_field('section_label') ) {
-
-        $label = get_sub_field('section_label');
-
-      } else {
-
-        $label = $title . ' Section';
-
-      }
+      $label = $title;
 
     }
 
-    if ( get_sub_field('status') == 0 ) {
-        $new_title = '<span style="color:red; font-weight:bold;">Inactive</span> - ' . $label;
-    } else {
-        $new_title = $label;
-    }
+  }
 
-    return $new_title;
+  if ( (get_row_layout() != 'wrapper_open') && (get_row_layout() != 'wrapper_close') && get_sub_field('status') == 0 ) {
+      $label = '<span style="color:red; font-weight:bold;">Inactive</span> - ' . $label;
+  } else {
+      $label = $label;
+  }
+
+  return $label;
 
 }
 

@@ -36,3 +36,26 @@ img[class^='wp-image-'] {
     margin-left: ($base-margin / 2);
   }
 }
+
+@include breakpoint(medium) {
+  section[class^='thin-'] .main.row,
+  [class*='thin-'] .main.row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.thin-90 .main.row {
+    width: 90%;
+  }
+  section.thin-80 .main.row {
+    width: 80%;
+  }
+  section.thin-70 .main.row {
+    width: 70%;
+  }
+  section.thin-60 .main.row {
+    width: 60%;
+  }
+  section.thin-50 .main.row {
+    width: 50%;
+  }
+}

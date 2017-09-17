@@ -84,6 +84,12 @@ if( function_exists('acf_add_options_page') ) {
     'parent_slug'   => 'ssm',
   ));
 
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Documentation',
+    'menu_title'  => 'Documentation',
+    'parent_slug'   => 'ssm',
+  ));
+
 }
 
 add_filter('acf/format_value/type=text', 'ssm_format_value', 10, 3);

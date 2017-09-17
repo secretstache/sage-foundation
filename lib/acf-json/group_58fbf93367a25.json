@@ -26,7 +26,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": ""
+                "value": "acf-options-brand-settings"
             }
         ]
     ],
@@ -38,5 +38,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495738942
+    "modified": 1505664388
 }

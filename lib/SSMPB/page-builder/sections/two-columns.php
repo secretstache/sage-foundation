@@ -15,6 +15,9 @@ $column_widths = get_sub_field( 'two_column_width_options' );
 $grid_array = explode('_', $column_widths);
 $alignment = strtolower( sanitize_title_with_dashes( get_sub_field( 'column_alignment' ) ) );
 
+$maybe_set_equalizer = $alignment == 'top' ? ' data-equalizer data-equalize-on="small"' : '';
+$maybe_set_equalizer_watch = $alignment == 'top' ? '  data-equalizer-watch' : '';
+
 if ( get_sub_field('column_gutter') == 'Collapse' ) {
   $gutter = ' collapse';
   $template_args['gutter'] = 'collapse';
@@ -45,7 +48,7 @@ SSMPB\maybe_do_section_header();
 
 if ( have_rows( 'two_column_components' ) ) {
 
-  echo '<div class="row main has-2-cols align-' . $alignment . $gutter . '" data-equalizer data-equalize-on="small">';
+  echo '<div class="row main has-2-cols align-' . $alignment . '"' . $maybe_set_equalizer . '>';
 
   $i = 1;
   $pluck = 0;
@@ -57,7 +60,7 @@ if ( have_rows( 'two_column_components' ) ) {
     // Pass along unique grid/column width for use on component template
     $template_args['column_width'] = $grid_array[$pluck];
 
-    echo '<div class="small-12 medium-' . $grid_array[$pluck] . ' column col-' . $i . '" data-equalizer-watch>';
+    echo '<div class="small-12 medium-' . $grid_array[$pluck] . ' column col-' . $i . '"' . $maybe_set_equalizer_watch . '>';
 
       SSMPB\do_column( $template_args );
 

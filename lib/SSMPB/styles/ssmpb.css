@@ -22,13 +22,14 @@
 }
 
 .acf-field-repeater .acf-tab-wrap.-left .acf-tab-group,
-.layout .acf-tab-wrap.-left .acf-tab-group {
-  width: 75px;
+.layout .acf-tab-wrap.-left .acf-tab-group,
+.acf-fields.-sidebar > .acf-tab-wrap.-left .acf-tab-group{
+  width: 74px !important;
 }
 
-.acf-field-repeater .acf-fields.-sidebar,
+.acf-field-repeater .acf-fields.-sidebar, 
 .layout .acf-fields.-sidebar {
-  padding-left: 75px !important;
+    padding-left: 74px !important;
 }
 
 .acf-field-repeater .acf-fields.-sidebar:before,

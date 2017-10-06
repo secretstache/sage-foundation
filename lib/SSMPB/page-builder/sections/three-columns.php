@@ -43,28 +43,32 @@ SSMPB\maybe_do_section_header();
 
 if ( have_rows( 'three_column_components' ) ) {
 
-  echo '<div class="row main has-3-cols align-' . $alignment . '"' . $maybe_set_equalizer .'>';
+  echo '<div class="grid-container">';
 
-  $i = 1;
-  $pluck = 0;
+    echo '<div class="grid-x grid-margin-x main has-3-cols align-' . $alignment . '"' . $maybe_set_equalizer .'>';
 
-  while ( have_rows( 'three_column_components' ) ) {
+    $i = 1;
+    $pluck = 0;
 
-    the_row();
+    while ( have_rows( 'three_column_components' ) ) {
 
-      // Pass along unique grid/column width for use on component template
-      $template_args['column_width'] = $grid_array[$pluck];
+      the_row();
 
-    echo '<div class="small-12 medium-' . $grid_array[$pluck] . ' column col-' . $i . '"' . $maybe_set_equalizer_watch . '>';
+        // Pass along unique grid/column width for use on component template
+        $template_args['column_width'] = $grid_array[$pluck];
 
-      SSMPB\do_column( $template_args );
+      echo '<div class="cell small-12 medium-' . $grid_array[$pluck] . ' col-' . $i . '"' . $maybe_set_equalizer_watch . '>';
+
+        SSMPB\do_column( $template_args );
+
+      echo '</div>';
+
+      $i++;
+      $pluck++;
+
+    }
 
     echo '</div>';
-
-    $i++;
-    $pluck++;
-
-  }
 
   echo '</div>';
 

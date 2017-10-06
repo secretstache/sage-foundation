@@ -32,21 +32,25 @@ if ( get_sub_field('background_options') == 'Video' && get_sub_field('background
 
 if ( have_rows( 'full_width_components' ) ) {
 
-  echo '<div class="row main has-1-col align-center">';
+  echo '<div class="grid-container">';
 
-    while ( have_rows( 'full_width_components' ) ) {
+    echo '<div class="grid-x grid-margin-x main has-1-col align-center">';
 
-      the_row();
+      while ( have_rows( 'full_width_components' ) ) {
 
-      $template_args['column_width'] = $column_width;
+        the_row();
 
-      echo '<div class="small-12 medium-' . $column_width . ' column">';
+        $template_args['column_width'] = $column_width;
 
-        SSMPB\do_column( $template_args );
+        echo '<div class="cell small-12 medium-' . $column_width . '">';
 
-      echo '</div>';
+          SSMPB\do_column( $template_args );
 
-    }
+        echo '</div>';
+
+      }
+
+    echo '</div>';
 
   echo '</div>';
 

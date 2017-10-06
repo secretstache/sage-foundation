@@ -30,8 +30,8 @@ function maybe_do_section_header() {
 
   if ( get_sub_field('include_content_block_header') == TRUE ) {
 
-    $html = '<div class="row align-center header-wrap">';
-      $html .= '<div class="small-12 medium-10 column">';
+    $html = '<div class="grid-x grid-margin-x align-center header-wrap">';
+      $html .= '<div class="cell small-12 medium-10">';
         $html .= '<header class="section-header">';
           if ( $headline = get_sub_field('section_headline') ) {
             $html .= $headline_tag_open . $headline . $headline_tag_close;

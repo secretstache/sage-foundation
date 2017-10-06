@@ -1,12 +1,10 @@
 {
   "name": "sage",
   "homepage": "https://roots.io/sage/",
-  "authors": [
-    "Ben Word <ben@benword.com>"
-  ],
+  "authors": ["Ben Word <ben@benword.com>"],
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "foundation-sites": "^6.3.1"
+    "foundation-sites": "^6.4.1"
   }
 }

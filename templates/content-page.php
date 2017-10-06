@@ -3,12 +3,14 @@
 <?php if ( get_the_content() ) { ?>
 
 <section class="content-block row-1 row-odd">
-  <div class="row align-center">
-    <div class="small-12 medium-8 column">
+  <div class="grid-container">
+  <div class="grid-x grid-margin-x align-center">
+    <div class="cell small-12 medium-8">
 
      <?php the_content(); ?>
 
     </div>
+  </div>
   </div>
 </section>
 

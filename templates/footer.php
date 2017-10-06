@@ -1,9 +1,11 @@
 <footer class="site-footer">
-  <?php if ( $copyright = get_field( 'copyright', 'options' ) ) { ?>
-  <div class="row">
-    <div class="small-12 column">
-      <?php echo $copyright; ?>
+  <div class="grid-container">
+    <?php if ( $copyright = get_field( 'copyright', 'options' ) ) { ?>
+    <div class="grid-x grid-margin-x">
+      <div class="cell">
+        <?php echo $copyright; ?>
+      </div>
     </div>
+    <?php } ?>
   </div>
-  <?php } ?>
 </footer>

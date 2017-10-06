@@ -25,12 +25,14 @@ if ( ! post_password_required() ) {
 
   } else {
 
-    echo '<section class="hero-unit default-hero-unit">';
-      echo '<div class="row align-center">';
-        echo '<div class="small-12 column">';
-          echo '<header class="component default-hero-header align-center">';
-            echo '<h1 class="headline">' . get_the_title() . '</h1>';
-          echo '</header>';
+    echo '<section class="hero-unit">';
+      echo '<div class="grid-container">';
+        echo '<div class="grid-x grid-margin-x align-center">';
+          echo '<div class="cell small-12">';
+            echo '<header class="component align-center">';
+              echo '<h1 class="headline">' . get_the_title() . '</h1>';
+            echo '</header>';
+          echo '</div>';
         echo '</div>';
       echo '</div>';
     echo '</section>';

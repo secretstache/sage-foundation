@@ -63,14 +63,8 @@ function ssm_move_cpts_to_admin_menu() {
 
   global $wp_post_types;
 
-  if ( post_type_exists('testimonial') ) {
-    $wp_post_types['testimonial']->show_in_menu = 'ssm';
-  }
-  if ( post_type_exists('code-snippet') ) {
-    $wp_post_types['code-snippet']->show_in_menu = 'ssm';
-  }
-  if ( post_type_exists('pricing-table') ) {
-    $wp_post_types['pricing-table']->show_in_menu = 'ssm';
+  if ( post_type_exists('insert_cpt') ) {
+    $wp_post_types['insert_cpt']->show_in_menu = 'ssm';
   }
 
 }

@@ -40,28 +40,32 @@ if ( get_sub_field('background_options') == 'Video' && get_sub_field('background
 
 if ( have_rows( 'two_column_components' ) ) {
 
-  echo '<div class="row main has-2-cols align-' . $alignment . $gutter . '" data-equalizer>';
+  echo '<div class="grid-container">';
 
-  $i = 1;
-  $pluck = 0;
+    echo '<div class="grid-x grid-margin-x main has-2-cols align-' . $alignment . $gutter . '" data-equalizer>';
 
-  while ( have_rows( 'two_column_components' ) ) {
+    $i = 1;
+    $pluck = 0;
 
-    the_row();
+    while ( have_rows( 'two_column_components' ) ) {
 
-    // Pass along unique grid/column width for use on component template
-    $template_args['column_width'] = $grid_array[$pluck];
+      the_row();
 
-    echo '<div class="small-12 medium-' . $grid_array[$pluck] . ' column col-' . $i . '" data-equalizer-watch>';
+      // Pass along unique grid/column width for use on component template
+      $template_args['column_width'] = $grid_array[$pluck];
 
-      SSMPB\do_column( $template_args );
+      echo '<div class="cell small-12 medium-' . $grid_array[$pluck] . ' col-' . $i . '" data-equalizer-watch>';
+
+        SSMPB\do_column( $template_args );
+
+      echo '</div>';
+
+      $i++;
+      $pluck++;
+
+    }
 
     echo '</div>';
-
-    $i++;
-    $pluck++;
-
-  }
 
   echo '</div>';
 

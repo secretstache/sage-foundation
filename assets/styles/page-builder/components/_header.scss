@@ -1,16 +1,5 @@
-header.component {
-  margin-bottom: 0;
-
-}
-
-.row.has-one-column {
-
-  .medium-12 header.component {
-    @include breakpoint(medium) {
-    margin-left: auto;
-    margin-right: auto;
-    width: 83.3333333333%;
-    }
-  }
-
+header.section-header {
+  @include responsive-margin("bottom");
+  margin-top: 0;
+  text-align: center;
 }

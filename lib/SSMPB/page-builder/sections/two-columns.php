@@ -18,13 +18,6 @@ $alignment = strtolower( sanitize_title_with_dashes( get_sub_field( 'column_alig
 $maybe_set_equalizer = $alignment == 'top' ? ' data-equalizer data-equalize-on="small"' : '';
 $maybe_set_equalizer_watch = $alignment == 'top' ? '  data-equalizer-watch' : '';
 
-if ( get_sub_field('column_gutter') == 'Collapse' ) {
-  $gutter = ' collapse';
-  $template_args['gutter'] = 'collapse';
-} else {
-  $gutter = '';
-}
-
 if ( get_sub_field('background_options') == 'Image' && get_sub_field('background_image') != NULL ) {
   $image = get_sub_field('background_image');
   $style = ' style="background-image: url(' . $image['url'] . ')"';
@@ -32,51 +25,39 @@ if ( get_sub_field('background_options') == 'Image' && get_sub_field('background
 
 echo '<section' . SSMPB\section_id_classes() . $style . '>';
 
-if ( get_sub_field('background_options') == 'Video' && get_sub_field('background_video') != NULL ) {
+  SSMPB\maybe_do_section_header();
 
-  $video = get_sub_field('background_video');
+  if ( have_rows( 'two_column_components' ) ) {
 
-  echo '<video class="hero-video" autoplay loop>';
-    echo '<source src="' . $video['url'] . '" type="video/mp4">';
-  echo '</video>';
+    echo '<div class="grid-container">';
 
-  echo '<div class="overlay"></div>';
+      echo '<div class="grid-x grid-margin-x main has-2-cols align-center align-' . $alignment . '"' . $maybe_set_equalizer . '>';
 
-}
+      $i = 1;
+      $pluck = 0;
 
-SSMPB\maybe_do_section_header();
+      while ( have_rows( 'two_column_components' ) ) {
 
-if ( have_rows( 'two_column_components' ) ) {
+        the_row();
 
-  echo '<div class="grid-container">';
+        // Pass along unique grid/column width for use on component template
+        $template_args['column_width'] = $grid_array[$pluck];
 
-    echo '<div class="grid-x grid-margin-x main has-2-cols align-' . $alignment . '"' . $maybe_set_equalizer . '>';
+        echo '<div class="cell small-11 medium-' . $grid_array[$pluck] . ' col-' . $i . '"' . $maybe_set_equalizer_watch . '>';
 
-    $i = 1;
-    $pluck = 0;
+          SSMPB\do_column( $template_args );
 
-    while ( have_rows( 'two_column_components' ) ) {
+        echo '</div>';
 
-      the_row();
+        $i++;
+        $pluck++;
 
-      // Pass along unique grid/column width for use on component template
-      $template_args['column_width'] = $grid_array[$pluck];
-
-      echo '<div class="cell small-12 medium-' . $grid_array[$pluck] . ' col-' . $i . '"' . $maybe_set_equalizer_watch . '>';
-
-        SSMPB\do_column( $template_args );
+      }
 
       echo '</div>';
 
-      $i++;
-      $pluck++;
-
-    }
-
     echo '</div>';
 
-  echo '</div>';
-
-}
+  }
 
 echo '</section>';

@@ -1,23 +1,7 @@
 {
     "key": "group_58afd3b6741ba",
-    "title": "Component - Related Content",
+    "title": "Template - Related Content",
     "fields": [
-        {
-            "key": "field_58afd7d774600",
-            "label": "Content",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
         {
             "key": "field_58b358e23ddb1",
             "label": "Latest or Curated",
@@ -27,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -43,9 +27,38 @@
             "return_format": "value"
         },
         {
+            "key": "field_58b35a1a3ddb2",
+            "label": "Number of posts to show",
+            "name": "number_of_posts_to_show",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58b358e23ddb1",
+                        "operator": "==",
+                        "value": "Latest"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": 2
+        },
+        {
             "key": "field_58afd80174602",
-            "label": "Content to Show",
-            "name": "content_to_show",
+            "label": "Posts to Show",
+            "name": "posts_to_show",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -75,72 +88,6 @@
             "min": "",
             "max": "",
             "return_format": "id"
-        },
-        {
-            "key": "field_58b35a1a3ddb2",
-            "label": "Number of posts to show",
-            "name": "number_of_posts_to_show",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_58b358e23ddb1",
-                        "operator": "==",
-                        "value": "Latest"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": 2
-        },
-        {
-            "key": "field_58afd7ea74601",
-            "label": "Style",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_58afd82e74603",
-            "label": "Style",
-            "name": "style",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_5888f1c9f30ca"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
         }
     ],
     "location": [
@@ -160,5 +107,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1488150964
+    "modified": 1507409692
 }

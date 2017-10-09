@@ -1,48 +1,57 @@
 <?php
 
+global $template_args;
+global $tpl_component;
+
 $c_classes[] = 'video';
 
-$iframe = get_sub_field('video_link');
-$video_url = get_sub_field('video_link', false, false);
-$player = '';
+if ( $template_args['source'] == 'tpl' ) {
+
+  $iframe = $tpl_component['video_link'];
+
+} else {
+
+  $iframe = get_sub_field('video_link');
+
+}
 
 preg_match('/src="(.+?)"/', $iframe, $matches);
 
 $src = $matches[1];
 $params = array();
 
-if ( strpos($video_url, 'vimeo') !== false ) {
+if ( strpos( $iframe, 'vimeo' ) !== false ) {
+
   $params = array(
     'byline'    => 0,
     'title'     => 0,
-    'portrait'  => 0
+    'portrait'  => 0,
+    'quality'   => '1080p',
   );
 
-  $player = ' vimeo';
+  $c_classes[] = 'vimeo';
 
-} elseif ( strpos($video_url, 'youtube') !== false ) {
+} elseif ( strpos( $iframe, 'youtube' ) !== false ) {
+
   $params = array(
-    'rel'               => 0,
-    'showinfo'          => 0,
-    'modestbranding'    => 0,
-    'vq'                => 'highres'
+    'rel'             => 0,
+    'showinfo'        => 0,
+    'modestbranding'  => 1,
+    'vq'              => 'highres',
   );
 
-  $player = ' youtube';
+  $c_classes[] = 'youtube';
+
 }
 
 $new_src = add_query_arg($params, $src);
 $iframe = str_replace($src, $new_src, $iframe);
 
-// add extra attributes to iframe html
-$attributes = 'frameborder="0"';
-$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
-
 ?>
 
 <div<?php echo SSMPB\component_id_classes( $c_classes ); ?>>
 
-    <div class="flex-video<?php echo $player; ?>">
+    <div class="embed-container widescreen">
 
     <?php echo $iframe; ?>
 

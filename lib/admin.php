@@ -99,3 +99,20 @@ function ssm_format_value( $value, $post_id, $field ) {
   // return
   return $value;
 }
+
+add_filter( 'admin_body_class', 'is_front_admin_body_class' );
+/**
+ *  Filter the admin body classes if is_front
+ */
+function is_front_admin_body_class( $classes ) {
+
+  global $post;
+
+  $current_id = $post->ID;
+  $front_page_id = get_option( 'page_on_front' );
+
+  if ( $current_id == $front_page_id ) {
+    return $classes = 'is-front';
+  }
+
+}

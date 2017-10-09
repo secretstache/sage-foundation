@@ -2,41 +2,44 @@
 
 if ( ! post_password_required() ) {
 
-  if (have_rows('hero_unit')) {
+  global $template_args;
+  
+  $image = '';
+  $style = '';
 
-    global $template_args;
-    $template_args = array();
+  if ( get_field('background_options') == 'Image' && get_field('background_image') != NULL ) {
+    $image = get_field('background_image');
+    $style = ' style="background-image: url(' . $image['url'] . ')"';
+  }
+  
+  echo '<section' . SSMPB\hero_unit_id_classes() . $style . '>';
+  
+  if ( get_field('background_options') == 'Video' && get_field('background_video') != NULL ) {
+  
+    $video = get_field('background_video');
+  
+    echo '<video class="hero-video" autoplay loop>';
+      echo '<source src="' . $video['url'] . '" type="video/mp4">';
+    echo '</video>';
+  
+    echo '<div class="overlay"></div>';
+  
+  }
+  
+  if ( get_field('hero_unit_layout') == 'one_column') {
 
-    while (have_rows('hero_unit')) {
+    $template_args['column_width'] = '10';
 
-      the_row();
+    SSMPB\hm_get_template_part( SSMPB_DIR . 'page-builder/hero-unit/one-column.php', $template_args);
 
-      if (get_row_layout() == 'one_column') {
+  } elseif ( get_field('hero_unit_layout') == 'two_columns') {
 
-        SSMPB\hm_get_template_part( SSMPB_DIR . 'page-builder/hero-unit/one-column.php', $template_args);
+    $template_args['column_width'] = '6';
 
-      } elseif (get_row_layout() == 'two_columns') {
-
-        SSMPB\hm_get_template_part( SSMPB_DIR . 'page-builder/hero-unit/two-columns.php', $template_args);
-
-      }
-
-    }
-
-  } else {
-
-    echo '<section class="hero-unit">';
-      echo '<div class="grid-container">';
-        echo '<div class="grid-x grid-margin-x align-center">';
-          echo '<div class="cell small-12">';
-            echo '<header class="component align-center">';
-              echo '<h1 class="headline">' . get_the_title() . '</h1>';
-            echo '</header>';
-          echo '</div>';
-        echo '</div>';
-      echo '</div>';
-    echo '</section>';
+    SSMPB\hm_get_template_part( SSMPB_DIR . 'page-builder/hero-unit/two-columns.php', $template_args);
 
   }
+
+  echo '</section>';
 
 }

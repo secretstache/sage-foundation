@@ -1,54 +1,125 @@
 section.content-block {
   @include clearfix;
-  @include responsive-margin('top');
-  clear: both;
-  video {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-  }
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
+  @include responsive-margin("top");
+  position: relative;
+  z-index: 1;
+}
+
+section[class^="bg-"],
+section[class*="bg-"] {
+  @include responsive-padding("vert");
+  &.bg-video {
+    padding: 0;
   }
 }
 
-section[class^='bg-'],
-section[class*='bg-'],
-section.services {
-  @include responsive-padding('vert');
-  // margin-top: 0;
-}
-
-section:first-of-type[class^='bg-'],
-section:first-of-type[class*='bg-'],
-section[class^='bg-'] + section[class^='bg-'],
-section[class*='bg-'] + section[class*='bg-'],
-section.image-gallery + section[class^='bg-'],
-section.image-gallery + section[class*='bg-'] {
+section:first-of-type[class^="bg-"],
+section:first-of-type[class*="bg-"] {
   margin-top: 0;
-
 }
 
-section.content-block:last-of-type {
-  @include responsive-margin('bottom');
+section[class^="bg-"] + section[class^="bg-"],
+section[class*="bg-"] + section[class*="bg-"] {
+  padding-top: 0;
+  margin-top: 0;
 }
 
-section:last-of-type[class^='bg-'],
-section:last-of-type[class*='bg-'] {
+section.multiple + section.multiple {
+  @include responsive-margin("top");
+}
+
+section.content-block:last-of-type,
+section.content-block:last-of-type.multiple {
+  @include responsive-margin("bottom");
+}
+
+section:last-of-type[class^="bg-"],
+section:last-of-type[class*="bg-"],
+.home section:last-of-type[class^="bg-"],
+.home section:last-of-type[class*="bg-"] {
   margin-bottom: 0;
 }
 
-header.section-header {
-  text-align: center;
-  @include responsive-margin('bottom');
+section.bg-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section.bg-dark {
+  color: $white;
+
+  input,
+  textarea {
+    color: $white;
+  }
+
+  .button {
+    color: $white;
+  }
+}
+
+section.pull-top {
+  margin-top: 0 !important;
+}
+
+section[class^="bg-"] + section.pull-top[class^="bg-"],
+section[class*="bg-"] + section.pull-top[class*="bg-"] {
+  padding-top: 0 !important;
+}
+
+section.pull-bottom {
+  margin-bottom: 0 !important;
+  & + section.content-block[class^="bg-"],
+  & + section.content-block[class*="bg-"] {
+    margin-top: 0;
+  }
+}
+
+section[class^="bg-"] + section.pull-bottom[class^="bg-"],
+section[class*="bg-"] + section.pull-bottom[class*="bg-"] {
+  padding-bottom: 0 !important;
+}
+
+section.pull-vert {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  & + section.content-block[class^="bg-"],
+  & + section.content-block[class*="bg-"] {
+    margin-top: 0;
+  }
+}
+
+section.content-block[class^="bg-"].collapse-vert,
+section.content-block[class*="bg-"].collapse-vert,
+section.content-block.multiple {
+  @include responsive-margin("top");
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+section.content-block.collapse-vert,
+section.content-block.collapse-vert
+  + section.content-block[class^="bg-"].collapse-vert,
+section.content-block.collapse-vert
+  + section.content-block[class*="bg-"].collapse-vert {
+  margin-top: 0;
+}
+
+section.content-block:last-of-type.collapse-vert {
+  @include responsive-margin("bottom", $base-margin);
+}
+
+section.content-block[class^="bg-"].push-vert,
+section.content-block[class*="bg-"].push-vert {
+  @include responsive-padding("vert", $base-padding*2);
+}
+
+section.wide .row {
+  max-width: 100%;
+}
+
+section.collapse .row .column {
+  padding-left: 0;
+  padding-right: 0;
 }

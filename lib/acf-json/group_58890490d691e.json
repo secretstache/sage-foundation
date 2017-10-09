@@ -51,6 +51,27 @@
             "endpoint": 0
         },
         {
+            "key": "field_59d95710a9b6c",
+            "label": "Alignment",
+            "name": "alignment",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_58fe88359e1b7"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5893eff413d72",
             "label": "Style",
             "name": "style",
@@ -89,5 +110,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1496697695
+    "modified": 1507415854
 }

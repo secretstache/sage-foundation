@@ -1,12 +1,13 @@
 {
-    "key": "group_5904beee96050",
+    "key": "group_59d96d1223df6",
     "title": "Component List - Hero Unit",
     "fields": [
         {
-            "key": "field_5904beee9f090",
+            "key": "field_59d96d1227207",
             "label": "Components",
             "name": "components",
             "type": "flexible_content",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,21 +16,19 @@
                 "class": "",
                 "id": ""
             },
-            "button_label": "Add Component",
-            "min": "",
-            "max": "",
-            "layouts": [
-                {
+            "layouts": {
+                "5892b76428f69": {
                     "key": "5892b76428f69",
                     "name": "hero_header",
                     "label": "Header",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5904beeea33f7",
+                            "key": "field_59d96d122901f",
                             "label": "Header",
                             "name": "header",
                             "type": "clone",
+                            "value": null,
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -50,17 +49,18 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "5888f79932bee": {
                     "key": "5888f79932bee",
                     "name": "text_editor",
                     "label": "Text Editor",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5904beeea347c",
+                            "key": "field_59d96d12290c9",
                             "label": "Editor",
                             "name": "editor",
                             "type": "clone",
+                            "value": null,
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -81,17 +81,18 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "5888f8129ceae": {
                     "key": "5888f8129ceae",
                     "name": "image",
                     "label": "Image",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5904beeea34e2",
+                            "key": "field_59d96d1229165",
                             "label": "Image",
                             "name": "image",
                             "type": "clone",
+                            "value": null,
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -112,17 +113,18 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "588905a730ff2": {
                     "key": "588905a730ff2",
                     "name": "video",
                     "label": "Video",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5904beeea35c0",
+                            "key": "field_59d96d12292aa",
                             "label": "Video",
                             "name": "video",
                             "type": "clone",
+                            "value": null,
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -143,17 +145,18 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "5892bb79e8340": {
                     "key": "5892bb79e8340",
                     "name": "buttons",
                     "label": "Button(s)",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5904beeea3623",
+                            "key": "field_59d96d1229449",
                             "label": "Button(s)",
                             "name": "buttons",
                             "type": "clone",
+                            "value": null,
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -174,17 +177,18 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "588909b7ec4ff": {
                     "key": "588909b7ec4ff",
                     "name": "form",
                     "label": "Form",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5904beeea36db",
+                            "key": "field_59d96d1229507",
                             "label": "Form",
                             "name": "form",
                             "type": "clone",
+                            "value": null,
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -204,39 +208,11 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                {
-                    "key": "59024ab1245f4",
-                    "name": "html_editor",
-                    "label": "HTML Editor",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5904beeea388c",
-                            "label": "HTML Editor",
-                            "name": "html_editor",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_58ae828c9a0db"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
                 }
-            ]
+            },
+            "button_label": "Add Component",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -256,5 +232,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1496686268
+    "modified": 1507424039
 }

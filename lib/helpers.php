@@ -22,3 +22,8 @@ function ssm_get_primary_category() {
   return $primary_category;
 
 }
+
+function has_multiple_pages() {
+  global $wp_query;
+  return ($wp_query->max_num_pages > 1);
+}

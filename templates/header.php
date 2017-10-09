@@ -4,23 +4,16 @@
   <div class="grid-container">
     <div class="grid-x grid-margin-x align-middle align-center">
       <div class="brand cell shrink">
-
       <?php if ( $icon = get_field('brand_icon', 'options') ) { ?>
         <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" class="brand-icon">
       <?php } ?>
-      
       <?php if ( $word_mark = get_field('brand_word_mark', 'options') ) { ?>
         <img src="<?php echo $word_mark['url']; ?>" alt="<?php echo $word_mark['alt']; ?>" class="brand-word-mark">
       <?php } else { ?>
-
         <p class="site-title">
-
           <a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
-    
         </p>
-
       <?php } ?>
-
       </div>
     </div>
   </div>
@@ -44,11 +37,8 @@
           <?php if ( $word_mark = get_field('brand_word_mark', 'options') ) { ?>
           <img src="<?php echo $word_mark['url']; ?>" alt="<?php echo $word_mark['alt']; ?>" class="company-name">
           <?php } else { ?>
-
             <?php echo get_bloginfo('name'); ?>
-
           <?php } ?>
-
         </a>
       </div>
       <nav class="primary-navigation cell shrink">

@@ -5,9 +5,9 @@ body {
   font-weight: normal;
 }
 
-img[class*='wp-image-'],
-img[class^='wp-image-'] {
-    margin-bottom: rem-calc(20);
+img[class*="wp-image-"],
+img[class^="wp-image-"] {
+  @include responsive-margin("bottom", $base-margin/2);
 }
 
 .alignnone {
@@ -17,9 +17,9 @@ img[class^='wp-image-'] {
   height: auto;
 }
 .aligncenter {
+  @include responsive-margin("bottom", $base-margin/2);
   display: block;
   height: auto;
-  margin-bottom: ($base-margin / 2)
 }
 .alignleft,
 .alignright {
@@ -37,9 +37,17 @@ img[class^='wp-image-'] {
   }
 }
 
+.bg-grey-light {
+  background-color: $grey-light;
+}
+
+.bg-dark {
+  color: $reverse-font-color;
+}
+
 @include breakpoint(medium) {
-  section[class^='thin-'] .main.row,
-  [class*='thin-'] .main.row {
+  section[class^="thin-"] .main.row,
+  [class*="thin-"] .main.row {
     margin-left: auto;
     margin-right: auto;
   }

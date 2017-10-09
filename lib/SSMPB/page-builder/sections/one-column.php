@@ -18,42 +18,32 @@ if ( get_sub_field('background_options') == 'Image' && get_sub_field('background
 
 echo '<section' . SSMPB\section_id_classes() . $style . '>';
 
-if ( get_sub_field('background_options') == 'Video' && get_sub_field('background_video') != NULL ) {
+  SSMPB\maybe_do_section_header();
 
-  $video = get_sub_field('background_video');
+  if ( have_rows( 'full_width_components' ) ) {
 
-  echo '<video class="hero-video" autoplay loop>';
-    echo '<source src="' . $video['url'] . '" type="video/mp4">';
-  echo '</video>';
+    echo '<div class="grid-container">';
 
-  echo '<div class="overlay"></div>';
+      echo '<div class="grid-x grid-margin-x main has-1-col align-center">';
 
-}
+        while ( have_rows( 'full_width_components' ) ) {
 
-if ( have_rows( 'full_width_components' ) ) {
+          the_row();
 
-  echo '<div class="grid-container">';
+          $template_args['column_width'] = $column_width;
 
-    echo '<div class="grid-x grid-margin-x main has-1-col align-center">';
+          echo '<div class="cell small-11 medium-' . $column_width . '">';
 
-      while ( have_rows( 'full_width_components' ) ) {
+            SSMPB\do_column( $template_args );
 
-        the_row();
+          echo '</div>';
 
-        $template_args['column_width'] = $column_width;
+        }
 
-        echo '<div class="cell small-12 medium-' . $column_width . '">';
-
-          SSMPB\do_column( $template_args );
-
-        echo '</div>';
-
-      }
+      echo '</div>';
 
     echo '</div>';
 
-  echo '</div>';
-
-}
+  }
 
 echo '</section>';

@@ -2,7 +2,7 @@
 
 <?php if ( get_the_content() ) { ?>
 
-<section class="content-block row-1 row-odd">
+<section class="content-block">
   <div class="grid-container">
   <div class="grid-x grid-margin-x align-center">
     <div class="cell small-12 medium-8">
